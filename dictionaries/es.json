@@ -1,0 +1,12 @@
+{
+    "nav": {
+        "home": "Inicio",
+        "works": "Trabajos",
+        "source": "Código"
+    },
+    "home": {
+        "banner":"Angel's Portfilio",
+        "name": "Angel L. Valdés",
+        "description": "Web Developer (Front-end / Back-end / Design)"
+    }
+}
