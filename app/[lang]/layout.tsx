@@ -31,10 +31,11 @@ export default async function RootLayout({
   const { nav } = await getDictionary(lang)
 
   return (
-    <html lang={lang}>
+    <html lang={lang} className='dark'>
       <body className={`${mPlus.className} text-foreground bg-background`}>
         <Providers>
           <header>
+            {/* todo: change to another nav provider */}
             <Nav lang={lang} dictionary={nav}/>
           </header>
           <main className='text-foreground bg-background'>

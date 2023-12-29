@@ -1,5 +1,5 @@
 'use client'
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import {
   Navbar, 
   NavbarBrand, 
@@ -7,23 +7,22 @@ import {
   NavbarItem, 
   Link, 
   NavbarMenuToggle, 
+  NavbarMenuItem,
   NavbarMenu} from "@nextui-org/react";
 import Logo from "./Logo";
 import ThemeSwitcher from "./ThemeSwitcher";
 import { usePathname } from "next/navigation";
-import LangSwitcher from "./LangSwitcher";
+import LangSwitcher from "./icons/LangSwitcher";
 import { FaGithub } from "react-icons/fa";
 import { Locale, i18n } from "@/i18n.config";
 
 const LinkItem = ({label, href, pathname, lang}:any) => {
   const isDefaultLang = lang === i18n.defaultLocale
-  const path = isDefaultLang ? href : `/${lang}${href}`
+  const path = isDefaultLang ? href : href === '/' ? `/${lang}`: `/${lang}${href}`
   return (
-    <NavbarItem isActive={pathname ===path}>
-        <Link color={pathname ===path ? 'primary' : 'foreground'} href={path} underline="hover">
-          {label}
-        </Link>
-    </NavbarItem>
+    <Link color={pathname ===path ? 'primary' : 'foreground'} href={path} underline="hover">
+      {label}
+    </Link>
   )
 }
 
@@ -41,23 +40,30 @@ export default function Nav({ lang, dictionary }: { lang: Locale, dictionary:any
 
     return (
         <Navbar disableAnimation onMenuOpenChange={setIsMenuOpen} className="px-8">
+          <NavbarContent className="sm:hidden" justify="start">
+            <NavbarMenuToggle aria-label={isMenuOpen ? "Close menu" : "Open menu"} />
+          </NavbarContent>
+
           <NavbarContent>
-            <NavbarMenuToggle
-              aria-label={isMenuOpen ? "Close menu" : "Open menu"}
-              className="sm:hidden"
-            />
             <NavbarBrand>
               <Logo />
             </NavbarBrand>
           </NavbarContent>
     
           <NavbarContent className="hidden sm:flex gap-4" justify="center">
-            <LinkItem label={dictionary.home} href='/' pathname={pathname} lang={lang}/>
-            <LinkItem label={dictionary.works} href='/works' pathname={pathname} lang={lang}/>
-            <ExternalLinkItem label="Source Code" href='https://github.com/alvaldes/portfolio-next'>
-              <FaGithub /><span className="ml-1" >{dictionary.source}</span>
-            </ExternalLinkItem>
+            <NavbarItem>
+              <LinkItem label={dictionary.home} href='/' pathname={pathname} lang={lang}/>
+            </NavbarItem>
+            <NavbarItem>
+              <LinkItem label={dictionary.works} href='/works' pathname={pathname} lang={lang}/>
+            </NavbarItem>
+            <NavbarItem>
+              <ExternalLinkItem label="Source Code" href='https://github.com/alvaldes/portfolio-next'>
+                <FaGithub /><span className="ml-1" >{dictionary.source}</span>
+              </ExternalLinkItem>
+            </NavbarItem>
           </NavbarContent>
+
           <NavbarContent justify="end">
             <NavbarItem>
                 <ThemeSwitcher/>
@@ -66,12 +72,19 @@ export default function Nav({ lang, dictionary }: { lang: Locale, dictionary:any
               <LangSwitcher/>
             </NavbarItem>
           </NavbarContent>
+          
           <NavbarMenu>
-            <LinkItem label={dictionary.home} href='/' pathname={pathname} lang={lang}/>
-            <LinkItem label={dictionary.works} href='/works' pathname={pathname} lang={lang}/>
-            <ExternalLinkItem label="Source Code" href='https://github.com/alvaldes/portfolio-next'>
-              <FaGithub /><span className="ml-1" >{dictionary.source}</span>
-            </ExternalLinkItem>
+            <NavbarMenuItem>
+              <LinkItem label={dictionary.home} href='/' pathname={pathname} lang={lang}/>
+            </NavbarMenuItem>
+            <NavbarMenuItem>
+              <LinkItem label={dictionary.works} href='/works' pathname={pathname} lang={lang}/>
+            </NavbarMenuItem>
+            <NavbarMenuItem>
+              <ExternalLinkItem label="Source Code" href='https://github.com/alvaldes/portfolio-next'>
+                <FaGithub /><span className="ml-1" >{dictionary.source}</span>
+              </ExternalLinkItem>
+            </NavbarMenuItem>
           </NavbarMenu>
         </Navbar>
       );

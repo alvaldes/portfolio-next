@@ -1,6 +1,27 @@
 import Image from 'next/image'
 import { Locale } from '@/i18n.config'
 import { getDictionary } from '@/lib/dictionary'
+import { Badge, Button, Divider, Link, Tooltip } from '@nextui-org/react'
+import { ChevronDoubleRightIcon } from '@heroicons/react/16/solid'
+import TimeLine from './components/TimeLine'
+import ResponsiveTimeline from './components/ResponsiveTimeline'
+import { FaGithubSquare, FaInstagramSquare, FaLinkedin } from 'react-icons/fa'
+import XIcon from './components/icons/XIcon'
+
+const timeline = [
+  {
+    date: "2021 to Present",
+    info: "Working on Gentalia",
+  },
+  {
+    date: "Jan 2021",
+    info: "Strat workin as a Specialis at Cujae University",
+  },
+  {
+    date: "Dec 2021",
+    info: "Finish my studies as Software Engineer at UCI University",
+  },
+]
 
 export default async function Home({
   params: { lang }
@@ -9,18 +30,73 @@ export default async function Home({
 }) {
   const { home } = await getDictionary(lang)
   return (
-      <section className='container flex items-center justify-center'>
+      <article className='container flex flex-col'>
       <section className='flex flex-col gap-4 mt-3 container'>
-        <Image src='/images/readme.jpeg' alt="logo" width={800} height={200}></Image>
-        <h2>{home.title}</h2>
-        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-        <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32..</p>
-        <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).</p>
-        <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.</p>
-        <p>IMorbi ultricies risus eget sem sollicitudin porta. Mauris sollicitudin ipsum vel ante malesuada ultricies. Nunc malesuada, ipsum a aliquet vulputate, diam mi rhoncus tellus, in imperdiet risus purus ut erat. Sed ornare risus at cursus pulvinar. Praesent tristique ipsum purus, ut fermentum libero suscipit sit amet. Vivamus nunc lectus, sagittis nec est vitae, pharetra consequat sem. Nunc blandit accumsan commodo. Donec non lorem ac enim efficitur molestie et ac risus. Aenean euismod augue at egestas vulputate. Ut volutpat nulla ac ante fringilla maximus. Morbi luctus luctus rhoncus. Ut fermentum luctus quam, a tincidunt odio volutpat vitae. Duis in dapibus nunc. Fusce tempor risus id tellus facilisis cursus. Mauris lacinia sed lectus fringilla facilisis. Proin varius, sapien sit amet dictum varius, justo nulla mattis dolor, a hendrerit metus urna in enim.</p>
-        <p>Curabitur non leo sed nisl efficitur lobortis. Cras tincidunt placerat magna, at aliquet ante interdum ut. Suspendisse quis purus turpis. Integer ullamcorper dolor rhoncus lorem fermentum, vel imperdiet nunc varius. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Cras vehicula mauris ut odio viverra, et imperdiet libero lobortis. Nulla nunc tortor, venenatis vel dictum vel, consequat et augue. Cras vel eros id nisl pretium dignissim. Vivamus posuere dui nec arcu commodo, aliquam hendrerit tortor convallis. Nam facilisis commodo elit ac consequat.</p>
-        <p>Donec molestie porta ullamcorper. Aliquam feugiat vitae ligula et porta. Nulla sollicitudin tempus rutrum. Sed non dapibus augue. Nam maximus nec lectus et tempor. Sed eros sem, accumsan sit amet nisl vitae, pretium venenatis augue. Vivamus commodo nisl sed dictum suscipit. Morbi rutrum malesuada porttitor. Quisque dolor erat, scelerisque sit amet cursus sit amet, tincidunt quis nibh. Cras eu turpis neque. Donec lacinia vulputate urna, a eleifend massa efficitur ac. Proin pulvinar vulputate lacinia. In dapibus libero nec sagittis varius. Donec ut pellentesque eros. Sed sit amet tellus neque.</p>
+        <Image src="/images/banner.svg" alt="banner" width={300} height={300} className='self-center'/>
+
+        <span className='py-3 px-11 text-center dark:bg-white/10 bg-black/5 rounded-md'>{home.banner}</span>
+
+        <div className='flex justify-evenly py-2'>
+          <div className='flex flex-col self-start gap-1 items-start justify-start mt-12'>
+            <h1 className='text-3xl'>{home.name}</h1>
+            <Badge content={home.experience} color="warning" variant="solid" placement="top-right" shape="rectangle">
+              <h2 className='text-lg pr-12'>{home.description}</h2>
+            </Badge>
+            <span className='flex gap-2 pt-3'>
+              <Tooltip content="@alvaldes">
+                <Link color='foreground' href='/' isExternal>
+                  <FaLinkedin className='text-2xl text-blue-600'/>
+                </Link>
+              </Tooltip>
+              <Tooltip content="@alvaldes">
+                <Link color='foreground' href='/' isExternal>
+                  <FaGithubSquare className='text-2xl text-gray-400'/>
+                </Link>
+              </Tooltip>
+              <Tooltip content="@alvaldes">
+                <Link color='foreground' href='/' isExternal>
+                  <FaInstagramSquare className='text-2xl text-pink-600'/>
+                </Link>
+              </Tooltip>
+              <Tooltip content="@alvaldes_">
+                <Link color='foreground' href='/' isExternal className='w-5 h-5 pt-1'>
+                  <XIcon className='w-1 h-1'/>
+                </Link>
+              </Tooltip>
+              <Link color='foreground' href={`mailto:angelluis2605@gmail.com`} isExternal showAnchorIcon underline='always' className='text-base'>
+                angelluis2605@gmail.com
+              </Link>
+            </span>
+          </div>
+          <div className='flex flex-shrink-0'>
+            <Image src='/images/blob.svg' alt='blob' className='absolute -z-0' width={200} height={200}/>
+            <Image src='/images/angel.png' alt='angel' className='rounded-full z-10 mt-8 ml-8 border-teal-500 border-4' width={130} height={130}/>
+          </div>
+        </div>
       </section>
+      <section className="flex flex-col  gap-4 mt-14 container">
+        <h1 className='text-2xl font-extrabold'>{home.bio}</h1>
+        <Divider className="my-0" />
+        <p>{home.resume}<Link href={home.currentProject.url} color="secondary" underline='hover'>{home.currentProject.label}</Link>.</p>
+        <div className='flex justify-center'>
+          <Button
+            href="/works"
+            as={Link}
+            color="primary"
+            showAnchorIcon
+            variant="solid"
+            className='text-lg font-bold py-4 px-8'
+            anchorIcon={<ChevronDoubleRightIcon width={16} height={16}/>}
+          >
+            Portfolio
+          </Button>
+        </div>
+        
       </section>
+      <section className='container'>
+        {/* <TimeLine data={timeline}/> */}
+        <ResponsiveTimeline/>
+      </section>
+      </article>
   )
 }
