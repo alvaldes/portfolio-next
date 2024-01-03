@@ -20,22 +20,15 @@ function getLocale(request: NextRequest): string | undefined {
 
 export function middleware(request: NextRequest) {
     const pathname = request.nextUrl.pathname
-    const pathnameIsMissingLocale = i18n.locales.every(
-        locale => !pathname.startsWith(`/${locale}/`) && pathname !== `/${locale}`
+
+    // Check if the pathname already has a valid locale
+    const hasValidLocale = i18n.locales.some(
+        locale => pathname.startsWith(`/${locale}/`) || pathname === `/${locale}`
     )
 
-    // Redirect if there is no locale
-    if (pathnameIsMissingLocale) {
-        const locale = getLocale(request)
-
-        if (locale === i18n.defaultLocale) {
-        return NextResponse.rewrite(
-            new URL(
-            `/${locale}${pathname.startsWith('/') ? '' : '/'}${pathname}`,
-            request.url
-            )
-        )
-        }
+    // If the pathname doesn't have a valid locale, add the default prefix
+    if (!hasValidLocale) {
+        const locale = getLocale(request) || i18n.defaultLocale
 
         return NextResponse.redirect(
         new URL(
@@ -47,6 +40,6 @@ export function middleware(request: NextRequest) {
 }
 
 export const config = {
-  // Matcher ignoring `/_next/` and `/api/`
-  matcher: ['/((?!api|_next/static|_next/image|images|favicon.ico).*)']
+    // Matcher ignoring `/_next/` and `/api/`
+    matcher: ['/((?!api|_next/static|_next/image|images|favicon.ico).*)']
 }
