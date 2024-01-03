@@ -2,18 +2,31 @@
     "nav": {
         "home": "Inicio",
         "works": "Trabajos",
+        "contact": "Contactame",
         "source": "Código"
     },
     "home": {
-        "banner":"Hola, soy un Ingeniero de Software desde Cuba!",
+        "banner":"Hola, soy un Ingeniero de Software residente en Cuba.!",
         "experience": "+3 años",
         "name": "Angel L. Valdés",
-        "description": "Desarrollador Web (Front-end / Back-end / Design)",
-        "bio": "Bio",
+        "description": "Desarrollador Web (Full Stack + Diseño)",
+        "bio": "Biografía",
         "resume": "Angel es un ingeniero informático recién graduado que ofrece entusiasmo e ideas innovadoras. Experiencia demostrada en programación web y apasionado por las interfaces dinámicas y el código limpio. Experiencia trabajando con equipos para producir sitios web impactantes y de vanguardia que atraigan a los clientes y brinden resultados comerciales. Conocedor de los estándares de diseño y las preferencias del usuario. La experiencia incluye el diseño de sitios web responsivos en entornos ágiles. Trabajador de equipo excepcional con un enfoque analítico para desarrollar soluciones útiles. Actualmente, trabajando en ",
         "currentProject": {
             "label": "Aterm",
             "url": "/work/aterm"
         }
+    },
+    "footer": {
+        "contact_me": "Escribeme 🧑‍💻",
+        "to": "a:",
+        "mail": "angelluis2605@gmail.com",
+        "subject": "Asunto:",
+        "subject_text": "Consulta del portafolio: ¡Conectemos!",
+        "message": "Mensaje",
+        "message_text": "Ingresa el mensaje aquí",
+        "send": "Enviar",
+        "copy1": "Gracias a",
+        "copy2": "por su inspiración."
     }
 }

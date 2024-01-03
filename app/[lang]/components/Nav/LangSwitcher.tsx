@@ -1,8 +1,8 @@
 'use client'
 
 import { Button } from '@nextui-org/button'
-import SpainIcon from '../SpainIcon'
-import AmericanIcon from './AmericanIcon'
+import SpainIcon from '../icons/SpainIcon'
+import AmericanIcon from '../icons/AmericanIcon'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { i18n } from '@/i18n.config'
@@ -39,13 +39,13 @@ export default function LangSwitcher() {
 
   if (currentLocale !== i18n.defaultLocale && !pathnameIsMissingLocale){
     return (
-      <Button as={Link} href={redirectedPathName('en')} isIconOnly className='bg-cyan-500 text-black p-1.5' size='sm' aria-label='theme-toggle'>
+      <Button as={Link} href={redirectedPathName('en')} isIconOnly className='bg-indigo-200 text-black p-1.5' size='sm' aria-label='theme-toggle'>
         <AmericanIcon/>
       </Button>
   )
   } else {
     return (
-      <Button as={Link} href={redirectedPathName('es')} isIconOnly className='bg-pink-500 text-white p-1.5' size='sm' aria-label='theme-toggle'>
+      <Button as={Link} href={redirectedPathName('es')} isIconOnly className='bg-amber-600 text-white p-1.5' size='sm' aria-label='theme-toggle'>
         <SpainIcon/>
       </Button>
   )

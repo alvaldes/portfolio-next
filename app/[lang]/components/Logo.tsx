@@ -18,8 +18,8 @@ const Logo = () => {
     const logo = theme!== undefined ? `/images/logo-${theme}.svg` : '/images/logo-dark.svg';
 
     return (
-        <Link href="/" className='flex' onMouseEnter={() => setIsHover(true)} onMouseLeave={() => setIsHover(false)}>
-            <Image src={logo} alt="logo" width={20} height={20} className={`${isHover && 'animate-[wiggle_3s_ease-in_infinite]'}`}/>
+        <Link href="/" className='flex w-fit' onMouseEnter={() => setIsHover(true)} onMouseLeave={() => setIsHover(false)}>
+            <Image src={logo} alt="logo" width={20} height={20} className={`${isHover ? 'animate-flip_up': 'animate-flip_down' }`}/>
             <p className={`font-bold ml-2 ${theme==='light'?'text-zinc-800' : 'text-blue-50'}`}>
                 Angel Valdés
             </p>

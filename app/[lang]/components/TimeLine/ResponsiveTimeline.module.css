@@ -79,7 +79,7 @@ body{
 /* responsive */
 @media(max-width: 767px){
 	.timelineItems::before{
-		left: 7px;
+		left: 14px;
 	}
 	.timelineItem:nth-child(odd){
 		padding-right: 0;

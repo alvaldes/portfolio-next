@@ -1,3 +1,4 @@
+import { Comfortaa } from 'next/font/google';
 import type { Config } from 'tailwindcss'
 
 const {nextui} = require("@nextui-org/react");
@@ -13,6 +14,10 @@ const config: Config = {
   darkMode: 'class',
   theme: {
     extend: {
+      fontFamily: {
+        mplus: ["var(--font-m-plus)"],
+        comfortaa: ["var(--font-comfortaa)"],
+      },
       container: {
         center: true,
         padding: {
@@ -27,12 +32,17 @@ const config: Config = {
           'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
       },
       animation: {
-        wiggle: 'wiggle 1s ease-in-out infinite',
+        flip_up: 'flip_up 0.4s cubic-bezier(0.455, 0.030, 0.515, 0.955) both',
+        flip_down: 'flip_down 0.4s cubic-bezier(0.455, 0.030, 0.515, 0.955) both',
       },
       keyframes: {
-        wiggle: {
-          '0%, 100%': { transform: 'rotate(-180deg)' },
-          '50%': { transform: 'rotate(180deg)' },
+        flip_up: {
+          '0%': {transform: 'rotateX(0)'},
+          '100%': { transform: 'rotateX(-180deg)' },
+        },
+        flip_down: {
+          '0%': {transform: 'rotateX(-180deg)'},
+          '100%': { transform: 'rotateX(0)' },
         }
       }
     },
@@ -45,19 +55,33 @@ const config: Config = {
           background: "#f0e7bd", // or DEFAULT
             foreground: "#202023", // or 50 to 900 DEFAULT
             primary: {
-              50: '#eef2ff',
-              100: '#e0e7ff',
-              200: '#c7d2fe',
-              300: '#a5b4fc',
-              400: '#818cf8',
-              500: '#6366f1',
-              600: '#4f46e5',
-              700: '#4338ca',
-              800: '#3730a3',
-              900: '#312e81',
-              foreground: "#202023",
-              DEFAULT: "#6366f1",
+              '50': '#def0ff',
+              '100': '#b6e2ff',
+              '200': '#76cbff',
+              '300': '#2db2ff',
+              '400': '#0299f5',
+              '500': '#0078d2',
+              '600': '#0060aa',
+              '700': '#005796',
+              '800': '#074373',
+              '900': '#042b4d',
+              foreground: "#f0e7bd",
+              DEFAULT: "#0060aa",
             },
+            secondary: {
+              '50': '#ffe4eb',
+              '100': '#fecddb',
+              '200': '#fda4bd',
+              '300': '#fb7197',
+              '400': '#f43f71',
+              '500': '#e11d53',
+              '600': '#be1242',
+              '700': '#9f1239',
+              '800': '#881333',
+              '900': '#4c0519',
+              foreground: "#f0e7bd",
+              DEFAULT: "#be1242",
+            }
 
         },
       },
@@ -81,6 +105,20 @@ const config: Config = {
             foreground: "#202020",
             DEFAULT: "#3CBEA7",
           },
+          secondary: {
+            '50': '#ebe8ff',
+            '100': '#dad4ff',
+            '200': '#bfb2ff',
+            '300': '#af99ff',
+            '400': '#8255fd',
+            '500': '#7332f5',
+            '600': '#6420e1',
+            '700': '#541abd',
+            '800': '#46189a',
+            '900': '#2a0c69',
+            foreground: "#202023",
+            DEFAULT: "#8255fd",
+          }
         },
       },
     }

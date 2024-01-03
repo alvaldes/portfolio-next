@@ -1,16 +1,14 @@
 import type { Metadata } from 'next'
-import { M_PLUS_Rounded_1c } from 'next/font/google'
 import './globals.css'
 import Providers from './providers'
-import Nav from './components/Nav'
+import Nav from './components/Nav/Nav'
 import { Locale, i18n } from '@/i18n.config'
 import { getDictionary } from '@/lib/dictionary'
+import { mPlus } from '../fonts'
+import { comfortaa } from '../fonts'
+import GoToTop from './components/GoToTop'
+import Footer from './components/Footer'
 
-const mPlus = M_PLUS_Rounded_1c({
-  weight: [ '400', '500', '700', '800', '900' ],
-  subsets: ['latin'],
-  display: 'swap',
-})
 
 export const metadata: Metadata = {
   title: 'Create Next App',
@@ -28,19 +26,24 @@ export default async function RootLayout({
   children: React.ReactNode
   params: { lang: Locale }
 }) {
-  const { nav } = await getDictionary(lang)
+  const { nav, footer } = await getDictionary(lang)
+
+  const goTop = () => {
+
+  }
 
   return (
-    <html lang={lang} className='dark'>
-      <body className={`${mPlus.className} text-foreground bg-background`}>
+    <html lang={lang} className={`${mPlus.variable} ${comfortaa.variable} dark font-mplus`}>
+      <body className={`text-foreground bg-background`}>
         <Providers>
           <header>
-            {/* todo: change to another nav provider */}
             <Nav lang={lang} dictionary={nav}/>
           </header>
           <main className='text-foreground bg-background'>
             {children}
+            <GoToTop/>
           </main>
+          <Footer lang={lang} dictionary={{nav, footer}}/>
         </Providers>
       </body>
     </html>
