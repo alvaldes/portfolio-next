@@ -13,14 +13,16 @@ export default function Footer({ lang, dictionary }: { lang: Locale, dictionary:
     return (
         <footer className="container">
             <Divider/>
-            <div className="py-8 flex">
-                <div className="flex flex-col w-1/2 gap-2">
-                    <div className="mb-3"><Logo/></div>
-                    <LinkItem label={dictionary.nav.home} href='/' lang={lang}/>
-                    <LinkItem label={dictionary.nav.works} href='/works' lang={lang}/>
-                    <ExternalLinkItem label="Source Code" href='https://github.com/alvaldes/portfolio-next'>
-                        <FaGithub /><span className="ml-1" >{dictionary.nav.source}</span>
-                    </ExternalLinkItem>
+            <div className="sm:container py-8 flex flex-col-reverse sm:flex-row">
+                <div className="flex flex-col sm:w-1/2 gap-2 pb-4 sm:pb-0">
+                    <div className="flex gap-4 pl-4 text-xs justify-center sm:flex-col sm:gap-0 sm:pl-0 sm:text-base sm:justify-start">
+                        <div className="mb-0 sm:mb-3 mt-1 flex"><Logo/></div>
+                        <LinkItem label={dictionary.nav.home} href='/' lang={lang}/>
+                        <LinkItem label={dictionary.nav.works} href='/works' lang={lang}/>
+                        <ExternalLinkItem label="Source Code" href='https://github.com/alvaldes/portfolio-next'>
+                            <FaGithub /><span className="ml-1" >{dictionary.nav.source}</span>
+                        </ExternalLinkItem>
+                    </div>
                     <Socials/>
                 </div>
                 <SendMsg dictionary={dictionary.footer}/>

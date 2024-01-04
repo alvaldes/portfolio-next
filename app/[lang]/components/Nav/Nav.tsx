@@ -15,6 +15,7 @@ import { FaGithub } from "react-icons/fa";
 import { Locale, i18n } from "@/i18n.config";
 import LinkItem from "./LinkItem";
 import ExternalLinkItem from "./ExternalLinkItem";
+import NavLink from "./NavLink";
 
 export default function Nav({ lang, dictionary }: { lang: Locale, dictionary:any }) {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -32,13 +33,9 @@ export default function Nav({ lang, dictionary }: { lang: Locale, dictionary:any
           </NavbarContent>
     
           <NavbarContent className="hidden sm:flex gap-4" justify="center">
-            <NavbarItem>
-              <LinkItem label={dictionary.home} href='/' lang={lang}/>
-              <LinkItem label={dictionary.works} href='/works' lang={lang}/>
-            </NavbarItem>
-            <NavbarItem>
-              <LinkItem label={dictionary.contact} href='#contact-me' lang={lang}/>
-            </NavbarItem>
+            <NavLink label={dictionary.home} href='/' lang={lang}/>
+            <NavLink label={dictionary.works} href='/works' lang={lang}/>
+            <NavLink label={dictionary.contact} href='#contact-me' lang={lang}/>
             <NavbarItem>
               <ExternalLinkItem label="Source Code" href='https://github.com/alvaldes/portfolio-next'>
                 <FaGithub /><span className="ml-1" >{dictionary.source}</span>

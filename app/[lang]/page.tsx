@@ -37,29 +37,31 @@ export default async function Home({
 
           <span className='py-3 px-11 text-center dark:bg-white/10 bg-black/5 rounded-md font-comfortaa font-black'>{home.banner}</span>
 
-          <div className='flex justify-evenly flex-row-reverse py-2 md:flex-row gap-2'>
-            <div className='flex flex-col self-start gap-1 items-start justify-start md:mt-16 mt-3 w-3/4'>
+          <div className='grid-template py-2 mt-6  lg:container'>
+            <div className='flex flex-col self-start gap-1 items-start justify-start sm:mt-4 md:mt-12 lg:mt-14 grid-info'>
               <h1 className=' text-2xl md:text-3xl font-semibold'>{home.name}</h1>
               <Badge content={home.experience} color="warning" variant="solid" placement="top-right" shape="rectangle">
                 <h2 className='text-lg pr-0 pt-2 sm:pr-14 sm:pt-0'>{home.description}</h2>
               </Badge>
+            </div>
+            <div className='flex items-center justify-center sm:justify-start sm:items-start grid-socials sm:mt-4'>
               <Socials withEmail/>
             </div>
-            <div className='flex flex-shrink-0 justify-center'>
+            <div className='flex flex-shrink-0 justify-center grid-portrait'>
               <Image 
                 src='/images/blob.svg' 
                 alt='blob' 
-                className='absolute -z-0 size-20 md:size-60' 
+                className='absolute -z-0 size-16  sm:size-36 md:size-60' 
                 width={200} height={200}/>
               <Image 
                 src='/images/angel.png' 
                 alt='angel' 
-                className='rounded-full z-10 mt-4 md:mt-9 ml-0 border-teal-500 border-4 size-14 md:size-40' 
+                className='rounded-full z-10 mt-2 sm:mt-4 md:mt-9 ml-0 border-teal-500 border-4 size-14 sm:size-28 md:size-40' 
                 width={130} height={130}/>
             </div>
           </div>
         </section>
-        <section className="flex flex-col  gap-4 mt-14 container">
+        <section className="flex flex-col  gap-4 mt-8 md:mt-0 container">
           <h1 className='text-2xl font-bold'>{home.bio}</h1>
           <Divider className="my-0" />
           <p>
@@ -85,7 +87,6 @@ export default async function Home({
           
         </section>
         <section className='container'>
-          {/* <TimeLine data={timeline}/> */}
           <ResponsiveTimeline/>
         </section>
       </article>

@@ -1,6 +1,5 @@
 'use client'
 
-import { i18n } from "@/i18n.config"
 import { Link } from "@nextui-org/react"
 import { usePathname } from "next/navigation"
 
