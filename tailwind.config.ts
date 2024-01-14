@@ -1,4 +1,3 @@
-import { Comfortaa } from 'next/font/google';
 import type { Config } from 'tailwindcss'
 
 const {nextui} = require("@nextui-org/react");

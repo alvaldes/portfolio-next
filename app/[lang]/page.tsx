@@ -1,28 +1,11 @@
-import Image from 'next/image'
 import { Locale } from '@/i18n.config'
 import { getDictionary } from '@/lib/dictionary'
-import { Badge, Button, Divider, Link, Tooltip } from '@nextui-org/react'
+import { Badge, Button, Divider, Link } from '@nextui-org/react'
 import { ChevronDoubleRightIcon } from '@heroicons/react/16/solid'
-import TimeLine from './components/TimeLine/TimeLine'
 import ResponsiveTimeline from './components/TimeLine/ResponsiveTimeline'
-import { FaGithubSquare, FaInstagramSquare, FaLinkedin } from 'react-icons/fa'
-import XIcon from './components/icons/XIcon'
 import Socials from './components/Socials'
-
-const timeline = [
-  {
-    date: "2021 to Present",
-    info: "Working on Gentalia",
-  },
-  {
-    date: "Jan 2021",
-    info: "Strat workin as a Specialis at Cujae University",
-  },
-  {
-    date: "Dec 2021",
-    info: "Finish my studies as Software Engineer at UCI University",
-  },
-]
+import Image from 'next/image'
+import SectionTransition from './components/SectionTransition'
 
 export default async function Home({
   params: { lang }
@@ -31,13 +14,13 @@ export default async function Home({
 }) {
   const { home } = await getDictionary(lang)
   return (
-      <article className='container flex flex-col'>
-        <section className='flex flex-col gap-4 mt-3 container'>
-          <Image src="/images/banner.svg" alt="banner" width={400} height={400} className='self-center -my-10'/>
+      <article className='flex flex-col mx-auto'>
+        <SectionTransition delay={0.2} id='banner' className='flex flex-col gap-4 mt-3'>
+          <Image priority src="/images/banner.svg" alt="banner" width={400} height={400} className='self-center -my-10 w-[400px] h-[400px]'/>
 
           <span className='py-3 px-11 text-center dark:bg-white/10 bg-black/5 rounded-md font-comfortaa font-black'>{home.banner}</span>
 
-          <div className='grid-template py-2 mt-6  lg:container'>
+          <div className='grid-template py-2 mt-6'>
             <div className='flex flex-col self-start gap-1 items-start justify-start sm:mt-4 md:mt-12 lg:mt-14 grid-info'>
               <h1 className=' text-2xl md:text-3xl font-semibold'>{home.name}</h1>
               <Badge content={home.experience} color="warning" variant="solid" placement="top-right" shape="rectangle">
@@ -60,8 +43,8 @@ export default async function Home({
                 width={130} height={130}/>
             </div>
           </div>
-        </section>
-        <section className="flex flex-col  gap-4 mt-8 md:mt-0 container">
+        </SectionTransition>
+        <SectionTransition delay={0.3} id='bio' className="flex flex-col  gap-4 mt-8 md:mt-0">
           <h1 className='text-2xl font-bold'>{home.bio}</h1>
           <Divider className="my-0" />
           <p>
@@ -85,10 +68,10 @@ export default async function Home({
             </Button>
           </div>
           
-        </section>
-        <section className='container'>
+        </SectionTransition>
+        <SectionTransition delay={0.4} id='timeline' className=''>
           <ResponsiveTimeline/>
-        </section>
+        </SectionTransition>
       </article>
   )
 }

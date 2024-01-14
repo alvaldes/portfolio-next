@@ -16,7 +16,7 @@ export default function Footer({ lang, dictionary }: { lang: Locale, dictionary:
             <div className="sm:container py-8 flex flex-col-reverse sm:flex-row">
                 <div className="flex flex-col sm:w-1/2 gap-2 pb-4 sm:pb-0">
                     <div className="flex gap-4 pl-4 text-xs justify-center sm:flex-col sm:gap-0 sm:pl-0 sm:text-base sm:justify-start">
-                        <div className="mb-0 sm:mb-3 mt-1 flex"><Logo/></div>
+                        <div className="mb-0 sm:mb-3 mt-1 flex"><Logo noText/></div>
                         <LinkItem label={dictionary.nav.home} href='/' lang={lang}/>
                         <LinkItem label={dictionary.nav.works} href='/works' lang={lang}/>
                         <ExternalLinkItem label="Source Code" href='https://github.com/alvaldes/portfolio-next'>
