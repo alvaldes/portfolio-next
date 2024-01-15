@@ -11,7 +11,7 @@
         "name": "Angel L. Valdés",
         "description": "Web Developer (Full-Stack)",
         "bio": "Biography",
-        "resume": "Angel es un ingeniero informático recién graduado que ofrece entusiasmo e ideas innovadoras. Experiencia demostrada en programación web y apasionado por las interfaces dinámicas y el código limpio. Experiencia trabajando con equipos para producir sitios web impactantes y de vanguardia que atraigan a los clientes y brinden resultados comerciales. Conocedor de los estándares de diseño y las preferencias del usuario. La experiencia incluye el diseño de sitios web responsivos en entornos ágiles. Trabajador de equipo excepcional con un enfoque analítico para desarrollar soluciones útiles. Actualmente, trabajando en ",
+        "resume": "Boasting 3 years of web development expertise, I specialize in creating dynamic and responsive solutions. My unique proficiency in cutting-edge technologies, commitment to clean and efficient code, coupled with a passion for user-centric design, distinguishes me. Currently, I play a key role in the development of noteworthy projects, such as the ongoing work on ",
         "currentProject": {
             "label": "Aterm",
             "url": "/work/aterm"
@@ -66,7 +66,7 @@
         "message": "Message",
         "message_text": "Enter your message",
         "send": "Send",
-        "error": "You need to  specify the message before sending.",
+        "error": "You need to specify the message before sending.",
         "copy1": "Thanks to",
         "copy2": "for the inspiration."
     }

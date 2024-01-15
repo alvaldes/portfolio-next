@@ -20,27 +20,29 @@ export async function generateStaticParams() {
 
 export default async function RootLayout({
   children,
-  params: {lang}
+  params
 }: {
-  children: React.ReactNode
-  params: { lang: Locale }
+  readonly children: React.ReactNode
+  readonly params: { readonly lang: Locale }
 }) {
-  const { nav, footer } = await getDictionary(lang)
+  const { nav, footer } = await getDictionary(params.lang)
 
   return (
-    <html lang={lang} className={`${mPlus.variable} ${comfortaa.variable} dark font-mplus`}>
-      <body className={`text-foreground bg-background container`}>
+    <html lang={params.lang} className={`${mPlus.variable} ${comfortaa.variable} dark font-mplus`}>
+      <body className={`text-foreground container`}>
+        <div className="fixed left-0 top-0 -z-10 h-full w-full"><div className="absolute inset-0 -z-10 h-full w-full bg-background bg-[linear-gradient(to_right,#8080800a_1px,transparent_1px),linear-gradient(to_bottom,#8080800a_1px,transparent_1px)] bg-[size:14px_24px]"><div className="absolute left-0 right-0 top-0 -z-10 m-auto h-[310px] w-[310px] rounded-full dark:bg-amber-500 bg-rose-500 dark:opacity-20 opacity-40 blur-[100px]"></div></div></div>
         <Providers>
           <header className='lg:max-w-[75%]'>
-            <Navbar lang={lang} dictionary={nav}/>
+            <Navbar lang={params.lang} dictionary={nav} />
           </header>
-          <main className='text-foreground bg-background mt-20 w-full lg:max-w-[75%] mx-auto'>
+          <main className='text-foreground mt-20 w-full lg:max-w-[75%] mx-auto'>
             {children}
-            <GoToTop/>
+            <GoToTop />
           </main>
-          <Footer lang={lang} dictionary={{nav, footer}}/>
+          <Footer lang={params.lang} dictionary={{ nav, footer }} />
         </Providers>
       </body>
     </html>
   )
 }
+

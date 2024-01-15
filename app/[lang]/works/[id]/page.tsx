@@ -25,9 +25,9 @@ interface Project {
 
 export default async function Work({
     params: { lang, id }
-    } : {
+    } : Readonly<{
         params: { lang: Locale, id: string }
-    }) {
+    }>) {
     const { works } = await getDictionary(lang)
     const project = works.projects.find(p => p.id === id)
     const stackList = project?.stack === undefined ? [] : project.stack.split(',')

@@ -87,7 +87,7 @@ const config: Config = {
       dark: {
         layout: {},
         colors: {
-          background: "#202023", // or DEFAULT
+          background: "#121212", // or DEFAULT
           foreground: "#ECEDEE", // or 50 to 900 DEFAULT
           focus: "#044655",
           primary: {

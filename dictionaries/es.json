@@ -2,7 +2,7 @@
     "nav": {
         "home": "Inicio",
         "works": "Trabajos",
-        "contact": "Contactame",
+        "contact": "Contáctame",
         "source": "Código"
     },
     "home": {
@@ -11,26 +11,26 @@
         "name": "Angel L. Valdés",
         "description": "Desarrollador Web (Full-Stack)",
         "bio": "Biografía",
-        "resume": "Angel es un ingeniero informático recién graduado que ofrece entusiasmo e ideas innovadoras. Experiencia demostrada en programación web y apasionado por las interfaces dinámicas y el código limpio. Experiencia trabajando con equipos para producir sitios web impactantes y de vanguardia que atraigan a los clientes y brinden resultados comerciales. Conocedor de los estándares de diseño y las preferencias del usuario. La experiencia incluye el diseño de sitios web responsivos en entornos ágiles. Trabajador de equipo excepcional con un enfoque analítico para desarrollar soluciones útiles. Actualmente, trabajando en ",
+        "resume": "Con 3 años de experiencia como desarrollador web, sobresalgo en la creación de soluciones dinámicas y responsivas. Mi distintiva combinación de habilidades en tecnologías de vanguardia, dedicación al código limpio y eficiente, junto con una pasión por el diseño centrado en el usuario, me coloca en una posición única. Actualmente, contribuyo significativamente al desarrollo de proyectos destacados, como el trabajo en ",
         "currentProject": {
             "label": "Aterm",
             "url": "/work/aterm"
         }
     },
     "works": {
-        "title": "Projects",
-        "more": "More",
-        "goToWeb": "go to website",
-        "website": "Website",
-        "sourceCode": "Source Code",
+        "title": "Proyectos",
+        "more": "Más",
+        "goToWeb": "ir al Sitio",
+        "website": "Sitio Web",
+        "sourceCode": "Código",
         "stack": "Stack",
         "projects": [
             {
                 "id":"aterm",
                 "title": "aterm",
                 "year":"2022",
-                "shortDescription": "A interactive portfolio web terminal.",
-                "longDescription": "**aterm** is a static website or portfolio, that looks like a terminal. But it’s much better if someone that visits the web page, can actually type some commands and get the output like in a real styled terminal. You can call it Fake Terminal because it will not give you what a real shell-like SSH gives you.",
+                "shortDescription": "Una terminal web interactiva para portfolios.",
+                "longDescription": "**aterm** es un sitio web estático o portfolio que simula una terminal. Sin embargo, la experiencia mejora considerablemente cuando los visitantes pueden interactuar escribiendo comandos y obtener resultados, similar a una terminal real. Puedes llamarlo Terminal Falso, ya que no ofrece las capacidades completas de un shell real, como SSH.",
                 "website": "https://aterm.netlify.app/",
                 "sourceCode": "https://github.com/alvaldes/aterm",
                 "platform": "Web",
@@ -44,8 +44,8 @@
                 "id": "trivial",
                 "title": "Trivial",
                 "year":"2022",
-                "shortDescription": "A game where players are asked questions on different topics and have to get as many answers as possible right.",
-                "longDescription": "**Trivial** is a type of game in which players are asked questions about different topics and they have to get as many correct answers as possible. Besides having the benefit of improving and expanding your knowledge, either general or in more specific areas, this style of game is designed so that the contestants have fun playing, and its main objective is to create discussion and healthy debate among participants. In fact it is not mandatory that Trivia winners have to get a prize and almost everyone is ok with that as their main objective is to have fun and learn at the same time. Trivia questions and answers can be adapted to any audience and can be used in schools and universities to assist in language skills development and to test knowledge and skills levels.",
+                "shortDescription": "Un juego donde los jugadores responden preguntas sobre diferentes temas y tratan de acertar la mayor cantidad posible.",
+                "longDescription": "**Trivial** es un tipo de juego en el cual los participantes responden preguntas sobre diversos temas con el objetivo de obtener la mayor cantidad de respuestas correctas posible. Además de mejorar y ampliar el conocimiento, ya sea de manera general o en áreas más específicas, este estilo de juego está diseñado para que los concursantes se diviertan mientras participan. Su principal objetivo es fomentar la discusión y el debate saludable entre los participantes. De hecho, no es obligatorio que los ganadores de la Trivia reciban un premio y casi todos están de acuerdo con eso, ya que el principal objetivo es disfrutar y aprender al mismo tiempo. Las preguntas y respuestas de la Trivia se pueden adaptar a cualquier audiencia y pueden utilizarse en escuelas y universidades para ayudar en el desarrollo de habilidades lingüísticas y evaluar niveles de conocimiento y habilidades.",
                 "website": "https://trivial.alvaldes.vercel.app",
                 "sourceCode": "https://github.com/alvaldes/Trivial",
                 "platform": "Web",

@@ -9,14 +9,14 @@ import SectionTransition from './components/SectionTransition'
 
 export default async function Home({
   params: { lang }
-} : {
+} : Readonly<{
   params: { lang: Locale }
-}) {
+}>) {
   const { home } = await getDictionary(lang)
   return (
       <article className='flex flex-col mx-auto'>
         <SectionTransition delay={0.2} id='banner' className='flex flex-col gap-4 mt-3'>
-          <Image priority src="/images/banner.svg" alt="banner" width={400} height={400} className='self-center -my-10 w-[400px] h-[400px]'/>
+          <Image loading='lazy' src="/images/banner.svg" alt="banner" width={400} height={400} className='self-center -my-10 w-[400px] h-[400px]'/>
 
           <span className='py-3 px-11 text-center dark:bg-white/10 bg-black/5 rounded-md font-comfortaa font-black'>{home.banner}</span>
 
@@ -49,7 +49,6 @@ export default async function Home({
           <Divider className="my-0" />
           <p>
             {home.resume}
-            {/* todo: update the resume info and translations */}
             <Link href={home.currentProject.url} color="secondary" underline='hover' className='font-medium'>
               {home.currentProject.label}
             </Link>.

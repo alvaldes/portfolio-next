@@ -1,6 +1,7 @@
 import { Link, Tooltip } from "@nextui-org/react";
-import { FaGithubSquare, FaInstagramSquare, FaLinkedin } from "react-icons/fa";
+import { FaGithubSquare, FaLinkedin } from "react-icons/fa";
 import XIcon from "./icons/XIcon";
+import { IoDocumentText } from "react-icons/io5";
 
 export default function Socials({withEmail}:any){
     return (
@@ -15,9 +16,9 @@ export default function Socials({withEmail}:any){
                 <FaLinkedin className='text-2xl text-blue-600'/>
                 </Link>
             </Tooltip>
-            <Tooltip content="@alvaldes_">
-                <Link color='foreground' href='https://www.instagram.com/alvaldes_' isExternal>
-                <FaInstagramSquare className='text-2xl text-pink-600'/>
+            <Tooltip content="CV">
+                <Link color='foreground' href='https://drive.google.com/file/d/1XOHtTeCA07Q1TcbJih93Hq5SbN4jP-he/view?usp=sharing' isExternal>
+                <IoDocumentText className='text-2xl text-pink-600'/>
                 </Link>
             </Tooltip>
             <Tooltip content="@alvaldes_">
