@@ -6,6 +6,8 @@ import ResponsiveTimeline from './components/TimeLine/ResponsiveTimeline'
 import Socials from './components/Socials'
 import Image from 'next/image'
 import SectionTransition from './components/SectionTransition'
+import EarthCanvas from './components/EarthCanvas'
+import StartCanvas from './components/StarsCanvas'
 
 export default async function Home({
   params: { lang }
@@ -16,7 +18,10 @@ export default async function Home({
   return (
       <article className='flex flex-col mx-auto'>
         <SectionTransition delay={0.2} id='banner' className='flex flex-col gap-4 mt-3'>
-          <Image loading='lazy' src="/images/banner.svg" alt="banner" width={400} height={400} className='self-center -my-10 w-[400px] h-[400px]'/>
+          <div className='h-64 sm:h-unit-72 lg:h-96'>
+            <EarthCanvas/>
+            <StartCanvas/>
+          </div>
 
           <span className='py-3 px-11 text-center dark:bg-white/10 bg-black/5 rounded-md font-comfortaa font-black'>{home.banner}</span>
 
