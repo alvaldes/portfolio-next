@@ -17,7 +17,7 @@ export default function Socials({withEmail}:any){
                 </Link>
             </Tooltip>
             <Tooltip content="CV">
-                <Link color='foreground' href='https://drive.google.com/file/d/1XOHtTeCA07Q1TcbJih93Hq5SbN4jP-he/view?usp=sharing' isExternal>
+                <Link color='foreground' href='https://drive.google.com/file/d/1NRLFsHXhcrnLQkzjyx2DcKKFU2n95g5p/view?usp=sharing' isExternal>
                 <IoDocumentText className='text-2xl text-pink-600'/>
                 </Link>
             </Tooltip>
