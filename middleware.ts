@@ -28,7 +28,7 @@ export function middleware(request: NextRequest) {
 
     // If the pathname doesn't have a valid locale, add the default prefix
     if (!hasValidLocale) {
-        const locale = getLocale(request) || i18n.defaultLocale
+        const locale = getLocale(request) ?? i18n.defaultLocale
 
         return NextResponse.redirect(
         new URL(

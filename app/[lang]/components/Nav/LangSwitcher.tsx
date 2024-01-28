@@ -22,15 +22,6 @@ export default function LangSwitcher() {
       if (locale === i18n.defaultLocale) return pathName
       return `/${locale}${pathName}`
     } else {
-      if (locale === i18n.defaultLocale) {
-        const segments = pathName.split('/')
-        const isHome = segments.length === 2
-        if (isHome) return '/'
-
-        segments.splice(1, 1)
-        return segments.join('/')
-      }
-
       const segments = pathName.split('/')
       segments[1] = locale
       return segments.join('/')
