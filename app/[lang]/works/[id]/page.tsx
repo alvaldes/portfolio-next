@@ -43,7 +43,7 @@ export default async function Work({
             </div>
             <h1 className="text-2xl font-bold mt-4">{project?.title}</h1>
             <Divider></Divider>
-            <div className="my-3" dangerouslySetInnerHTML={{ __html:
+            <div className="my-3 text-pretty" dangerouslySetInnerHTML={{ __html:
                 project?.longDescription !== undefined
                 ? marked.parse(project.longDescription)
                 : ""
@@ -54,7 +54,9 @@ export default async function Work({
                         <GlobeAltIcon width={18} className="mr-1"/>
                         {works.website}:
                     </span>
-                    <Link href={project?.website} isExternal showAnchorIcon color="secondary">{project?.website.substring(8)}</Link>
+                    <Link href={project?.website} isExternal showAnchorIcon color="secondary" isDisabled={!project?.website.startsWith('http')}>
+                        {project?.website.startsWith('http') ? project?.website.substring(8) : project?.website}
+                    </Link>
                 </p>
                 <p className="flex flex-wrap">
                     <span className="flex font-bold mr-2 items-center">

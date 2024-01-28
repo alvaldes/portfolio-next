@@ -38,7 +38,7 @@ export default async function Works({
                         data={item} 
                         lang={lang} 
                         dictionary={works} 
-                        colSpan={(index === 0 && works.projects.length % 2 !== 0) ? 'col-span-full' : 'col-span-1'}/>
+                        colSpan={(index === 0 && works.projects.length % 2 !== 0) ? 'col-span-full lg:col-span-1' : 'col-span-1'}/>
                 ))}
             </div>
         </SectionTransition>

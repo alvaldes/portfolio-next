@@ -26,6 +26,21 @@
         "stack": "Stack",
         "projects": [
             {
+                "id":"search-intranet",
+                "title": "search-intranet",
+                "year":"2022",
+                "shortDescription": "A search engine to CUJAE 's Intranet",
+                "longDescription": "At the José Antonio Echeverría University (CUJAE) in Havana, Cuba, there is a search engine for the Intranet. This engine is not only efficient in searching and locating relevant information, but it also interacts with a Lightweight Directory Access Protocol (LDAP). In the case of CUJAE, this allows the search engine to access directory information, such as user details and network structure, to provide more accurate and personalized search results. It’s worth noting that this search engine is only available on the internal network of the university campus.",
+                "website": "university campus network",
+                "sourceCode": "https://github.com/alvaldes/search-intranet",
+                "platform": "Web",
+                "active": 1,
+                "stack": "React.JS, TailwindCSS",
+                "thumbCard": "/images/search-intranet/thumbCard.webp",
+                "thumbFirst":"/images/search-intranet/thumbFirst.webp",
+                "thumbMockup":"/images/search-intranet/thumbMockup.webp"
+            },
+            {
                 "id":"aterm",
                 "title": "aterm",
                 "year":"2022",
@@ -43,7 +58,7 @@
             {
                 "id": "trivial",
                 "title": "Trivial",
-                "year":"2022",
+                "year":"2021",
                 "shortDescription": "A game where players are asked questions on different topics and have to get as many answers as possible right.",
                 "longDescription": "**Trivial** is a type of game in which players are asked questions about different topics and they have to get as many correct answers as possible. Besides having the benefit of improving and expanding your knowledge, either general or in more specific areas, this style of game is designed so that the contestants have fun playing, and its main objective is to create discussion and healthy debate among participants. In fact it is not mandatory that Trivia winners have to get a prize and almost everyone is ok with that as their main objective is to have fun and learn at the same time. Trivia questions and answers can be adapted to any audience and can be used in schools and universities to assist in language skills development and to test knowledge and skills levels.",
                 "website": "https://trivial.alvaldes.vercel.app",

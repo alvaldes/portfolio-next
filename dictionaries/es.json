@@ -26,6 +26,21 @@
         "stack": "Stack",
         "projects": [
             {
+                "id":"search-intranet",
+                "title": "search-intranet",
+                "year":"2022",
+                "shortDescription": "Un motor de búsqueda para la Intranet de CUJAE.",
+                "longDescription": "En la Universidad José Antonio Echeverría (CUJAE) de la Habana, Cuba, se ha implementado un motor de búsqueda para la Intranet. Este motor no solo es eficiente para buscar y localizar información relevante, sino que también interactúa con un Servicio de Directorio Ligero de Acceso a Directorios (LDAP). En el caso de CUJAE, esto permite que nuestro motor de búsqueda acceda a la información del directorio, como los detalles del usuario y la estructura de la red, para proporcionar resultados de búsqueda más precisos y personalizados. Cabe destacar que este motor de búsqueda está disponible solo en la red interna de nuestro campus universitario.",
+                "website": "red del campus universitario",
+                "sourceCode": "https://github.com/alvaldes/search-intranet",
+                "platform": "Web",
+                "active": 1,
+                "stack": "React.JS, TailwindCSS",
+                "thumbCard": "/images/search-intranet/thumbCard.webp",
+                "thumbFirst":"/images/search-intranet/thumbFirst.webp",
+                "thumbMockup":"/images/search-intranet/thumbMockup.webp"
+            },
+            {
                 "id":"aterm",
                 "title": "aterm",
                 "year":"2022",
@@ -43,7 +58,7 @@
             {
                 "id": "trivial",
                 "title": "Trivial",
-                "year":"2022",
+                "year":"2021",
                 "shortDescription": "Un juego donde los jugadores responden preguntas sobre diferentes temas y tratan de acertar la mayor cantidad posible.",
                 "longDescription": "**Trivial** es un tipo de juego en el cual los participantes responden preguntas sobre diversos temas con el objetivo de obtener la mayor cantidad de respuestas correctas posible. Además de mejorar y ampliar el conocimiento, ya sea de manera general o en áreas más específicas, este estilo de juego está diseñado para que los concursantes se diviertan mientras participan. Su principal objetivo es fomentar la discusión y el debate saludable entre los participantes. De hecho, no es obligatorio que los ganadores de la Trivia reciban un premio y casi todos están de acuerdo con eso, ya que el principal objetivo es disfrutar y aprender al mismo tiempo. Las preguntas y respuestas de la Trivia se pueden adaptar a cualquier audiencia y pueden utilizarse en escuelas y universidades para ayudar en el desarrollo de habilidades lingüísticas y evaluar niveles de conocimiento y habilidades.",
                 "website": "https://trivial.alvaldes.vercel.app",
