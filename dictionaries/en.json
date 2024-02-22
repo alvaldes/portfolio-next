@@ -26,6 +26,21 @@
         "stack": "Stack",
         "projects": [
             {
+                "id":"web-tools",
+                "title": "ωεβ Τσφδ",
+                "year":"2024",
+                "shortDescription": "A comprehensive collection of web resources and tools",
+                "longDescription": "Web Tools is an innovative web project designed to streamline access to a curated collection of web tools and resources, powered by Astro and integrated with the Notion API as its database. This platform aims to serve developers, designers, entrepreneurs, and anyone looking to enhance their online presence with efficient and user-friendly digital tools.",
+                "website": "https://web-tools.vercel.app/",
+                "sourceCode": "https://github.com/alvaldes/web-tools",
+                "platform": "Web",
+                "active": 1,
+                "stack": "Astro, TailwindCSS, Notion API",
+                "thumbCard": "/images/web-tools/thumbCard.webp",
+                "thumbFirst":"/images/web-tools/thumbFirst.webp",
+                "thumbMockup":"/images/web-tools/thumbMockup.webp"
+            },
+            {
                 "id":"search-intranet",
                 "title": "search-intranet",
                 "year":"2022",
