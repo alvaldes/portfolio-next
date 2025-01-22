@@ -35,9 +35,9 @@ export default function ResponsiveTimelineItem({data, key}:any) {
                 </span>
             </span>
             <div className={`${styles.timelineDate} text-secondary`}>{data.date}</div>
-            <div className={`${styles.timelineContent} bg-zinc-800 dark:bg-white/5`}>
-                <h3>{data.title}</h3>
-                <p>{data.description}</p>
+            <div className={`${styles.timelineContent} bg-white/40 dark:bg-white/5`}>
+                <h3 className='text-secondary-600 dark:text-foreground'>{data.title}</h3>
+                <p className='text-zinc-500 dark:text-zinc-400'>{data.description}</p>
             </div>
         </motion.div>
     )
