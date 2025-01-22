@@ -28,7 +28,7 @@ export default async function Home({
           <div className='grid-template py-2 mt-6'>
             <div className='flex flex-col self-start gap-1 items-start justify-start sm:mt-4 md:mt-12 lg:mt-14 grid-info'>
               <h1 className=' text-2xl md:text-3xl font-semibold'>{home.name}</h1>
-              <Badge content={home.experience} color="warning" variant="solid" placement="top-right" shape="rectangle">
+              <Badge content={home.experience} color="warning" variant="solid" placement="top-right" shape="rectangle" showOutline={false}>
                 <h2 className='text-lg pr-0 pt-2 sm:pr-14 sm:pt-0'>{home.description}</h2>
               </Badge>
             </div>
