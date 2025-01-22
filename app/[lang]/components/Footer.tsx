@@ -6,6 +6,7 @@ import LinkItem from "./Nav/LinkItem";
 import ExternalLinkItem from "./Nav/ExternalLinkItem";
 import { FaGithub } from "react-icons/fa";
 import Socials from "./Socials";
+import { Buymeacoffee } from "./Buymeacoffee";
 
 
 export default function Footer({ lang, dictionary }: { lang: Locale, dictionary:any }) {
@@ -24,6 +25,7 @@ export default function Footer({ lang, dictionary }: { lang: Locale, dictionary:
                         </ExternalLinkItem>
                     </div>
                     <Socials/>
+                    <div className="mb-0 sm:mb-3 mt-1 flex"><Buymeacoffee/></div>
                 </div>
                 <SendMsg dictionary={dictionary.footer}/>
             </div>

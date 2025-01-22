@@ -29,9 +29,9 @@ export default function Socials({withEmail}:any){
                 </div>
             </Tooltip>
             { withEmail && (
-                <Link color='foreground' href={`mailto:angelluis2605@gmail.com`} 
+                <Link color='foreground' href={`mailto:alvaldes.dev@gmail.com`} 
                 isExternal showAnchorIcon underline='always' className='text-base'>
-                    angelluis2605@gmail.com
+                    alvaldes.dev@gmail.com
                 </Link>
             )}
         </span>
