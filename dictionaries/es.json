@@ -6,16 +6,42 @@
         "source": "Código"
     },
     "home": {
-        "banner":"Hola, soy un Ingeniero de Software residente en Cuba.!",
+        "banner":"Hola, soy un Ingeniero de Software residente en México.!",
         "experience": "+3 años",
         "name": "Angel L. Valdés",
         "description": "Desarrollador Web (Full-Stack)",
         "bio": "Biografía",
-        "resume": "Con 3 años de experiencia como desarrollador web, sobresalgo en la creación de soluciones dinámicas y responsivas. Mi distintiva combinación de habilidades en tecnologías de vanguardia, dedicación al código limpio y eficiente, junto con una pasión por el diseño centrado en el usuario, me coloca en una posición única. Actualmente, contribuyo significativamente al desarrollo de proyectos destacados, como el trabajo en ",
+        "resume": "Con más de 4 años de experiencia en desarrollo web, me especializo en crear soluciones dinámicas, responsivas y centradas en el usuario. Mi experiencia en tecnologías modernas, dedicación a un código limpio y eficiente, y pasión por ofrecer experiencias de usuario impactantes me distinguen. Actualmente, contribuyo al desarrollo de proyectos de alto impacto, demostrando mi capacidad para resolver desafíos complejos y fomentar la innovación. Descubre mi trabajo más reciente en ",
         "currentProject": {
             "label": "ωεβ Τσφδ",
             "url": "/works/web-tools"
-        }
+        },
+        "timeline": [
+            {
+                "date": "Sep-2024 al Presente",
+                "title": "Maestría en Ingeniería de Software",
+                "description": "Actualmente estoy cursando una Maestría en Ingeniería de Software en la Universidad Tecnológica de la Mixteca (UTM) en Oaxaca, México.",
+                "icon": "rocketLaunch"
+            },
+            {
+                "date": "Dic-2022 a Oct-2024",
+                "title": "GENTALIA.SA",
+                "description": "Desde el puesto de Desarrollador Full-Stack, tuve la oportunidad de trabajar con tecnologías como Angular y Spring Boot en proyectos de alto impacto en sectores de alto riesgo en España.",
+                "icon": "briefcase"
+            },
+            {
+                "date": "Ene-2022 a Ene-2024",
+                "title": "Universidad CUJAE",
+                "description": "Comencé a trabajar como especialista en la Dirección de Servicios de las TIC (DISERTIC) en la Universidad Tecnológica de La Habana José Antonio Echeverría (CUJAE).",
+                "icon": "buildingLibrary"
+            },
+            {
+                "date": "Sep-2016 a Dic-2021",
+                "title": "Ingeniería en Ciencias Informáticas",
+                "description": "Estudié una Ingeniería en Ciencias Informáticas en la Universidad de las Ciencias Informáticas (UCI) en La Habana.",
+                "icon": "academicCap"
+            }
+        ]
     },
     "works": {
         "title": "Proyectos",
@@ -98,6 +124,7 @@
         "send": "Enviar",
         "error": "Debe especificar el mensaje antes de enviarlo.",
         "copy1": "Gracias a",
-        "copy2": "por su inspiración."
+        "copy2": "por su inspiración.",
+        "buyMeACoffee": "¡Apóyame con un café!"
     }
 }

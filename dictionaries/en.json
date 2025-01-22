@@ -6,16 +6,42 @@
         "source": "Source Code"
     },
     "home": {
-        "banner":"Hello, I'm a Software Engineer base in Cuba!",
+        "banner":"Hello, I'm a Software Engineer base in Mexico!",
         "experience": "+3 years",
         "name": "Angel L. Valdés",
         "description": "Web Developer (Full-Stack)",
         "bio": "Biography",
-        "resume": "Boasting 3 years of web development expertise, I specialize in creating dynamic and responsive solutions. My unique proficiency in cutting-edge technologies, commitment to clean and efficient code, coupled with a passion for user-centric design, distinguishes me. Currently, I play a key role in the development of noteworthy projects, such as the ongoing work on ",
+        "resume": "With over 4 years of web development expertise, I specialize in crafting dynamic, responsive, and user-focused solutions. My proficiency in modern technologies, dedication to clean and efficient code, and passion for delivering impactful user experiences set me apart. Currently, I contribute to the development of high-impact projects, showcasing my ability to solve complex challenges and drive innovation. Check out my latest work on ",
         "currentProject": {
             "label": "ωεβ Τσφδ",
             "url": "/works/web-tools"
-        }
+        },
+        "timeline": [
+            {
+                "date": "Sep-2024 to Present",
+                "title": "Master's Degree in Software Engineering",
+                "description": "I am currently pursuing a Master’s degree in Software Engineering at the Technological University of the Mixteca (UTM) in Oaxaca, Mexico.",
+                "icon": "rocketLaunch"
+            },
+            {
+                "date": "Dec-2022 to Oct-2024",
+                "title": "GENTALIA.SA",
+                "description": "From the position of a Full-Stack Developer, I had the opportunity to work with technologies such as Angular and Spring Boot on high-impact projects in high-risk sectors in Spain.",
+                "icon": "briefcase"
+            },
+            {
+                "date": "Jan-2022 to Jan-2024",
+                "title": "CUJAE University",
+                "description": "I started working as a specialist in the Directorate of ICT Services (DISERTIC) at the Technological University of Havana José Antonio Echeverría (CUJAE).",
+                "icon": "buildingLibrary"
+            },
+            {
+                "date": "Sep-2016 to Dec-2021",
+                "title": "Computer Science Degree",
+                "description": "I pursued a degree in Computer Science at the University of Computer Science (UCI) in Havana.",
+                "icon": "academicCap"
+            }
+        ]
     },
     "works": {
         "title": "Projects",
@@ -98,6 +124,7 @@
         "send": "Send",
         "error": "You need to specify the message before sending.",
         "copy1": "Thanks to",
-        "copy2": "for the inspiration."
+        "copy2": "for the inspiration.",
+        "buyMeACoffee": "Buy me a coffee!"
     }
 }

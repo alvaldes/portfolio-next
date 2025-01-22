@@ -74,7 +74,7 @@ export default async function Home({
           
         </SectionTransition>
         <SectionTransition delay={0.4} id='timeline' className=''>
-          <ResponsiveTimeline/>
+          <ResponsiveTimeline data={home.timeline}/>
         </SectionTransition>
       </article>
   )

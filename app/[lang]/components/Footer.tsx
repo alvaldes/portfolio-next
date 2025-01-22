@@ -25,7 +25,7 @@ export default function Footer({ lang, dictionary }: { lang: Locale, dictionary:
                         </ExternalLinkItem>
                     </div>
                     <Socials/>
-                    <div className="mb-0 sm:mb-3 mt-1 flex"><Buymeacoffee/></div>
+                    <div className="flex gap-4 pl-4 text-xs justify-center sm:flex-col sm:gap-0 sm:pl-0 sm:text-base sm:justify-start"><Buymeacoffee label={dictionary.footer.buyMeACoffee}/></div>
                 </div>
                 <SendMsg dictionary={dictionary.footer}/>
             </div>
