@@ -39,12 +39,12 @@ export default async function Home({
               <Image 
                 src='/images/blob.svg' 
                 alt='blob' 
-                className='absolute -z-0 size-16  sm:size-36 md:size-60' 
+                className='absolute -z-0 size-16  sm:size-36 md:size-60 brightness-50 contrast-100 -hue-rotate-30' 
                 width={200} height={200}/>
               <Image 
-                src='/images/angel.png' 
+                src='/images/angel.webp' 
                 alt='angel' 
-                className='rounded-full z-10 mt-2 sm:mt-4 md:mt-9 ml-0 border-teal-500 border-4 size-14 sm:size-28 md:size-40' 
+                className='rounded-full z-10 mt-2 sm:mt-4 md:mt-9 ml-0 border-teal-800 border-4 size-14 sm:size-28 md:size-40' 
                 width={130} height={130}/>
             </div>
           </div>
