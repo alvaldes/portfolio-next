@@ -33,7 +33,7 @@ const GoToTop = () => {
             color="warning" 
             variant="faded" 
             aria-label="go top" 
-            className={`${!isVisible && 'hidden'} bg-zinc-900 p-2 animate-bounce fixed bottom-10 right-10 cursor-pointer z-30`}
+            className={`${!isVisible && 'hidden'} bg-amber-100 dark:bg-zinc-900  p-2 animate-bounce fixed bottom-10 right-10 cursor-pointer z-30`}
             // onClick={goTop}
             onClick={scrollToTop}
             >
