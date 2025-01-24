@@ -27,9 +27,9 @@ export default async function Home({
 
           <div className='grid-template py-2 mt-6'>
             <div className='flex flex-col self-start gap-1 items-start justify-start sm:mt-4 md:mt-12 lg:mt-14 grid-info'>
-              <h1 className=' text-2xl md:text-3xl font-semibold'>{home.name}</h1>
-              <Badge content={home.experience} color="warning" variant="solid" placement="top-right" shape="rectangle" showOutline={false}>
-                <h2 className='text-lg pr-0 pt-2 sm:pr-14 sm:pt-0'>{home.description}</h2>
+              <h1 className='mb-2 text-2xl md:text-3xl font-semibold'>{home.name}</h1>
+              <Badge content={home.experience} color="warning" variant="solid" placement="top-right" shape="rectangle" showOutline={false} className='text-xs sm:text-sm'>
+                <h2 className='text-sm sm:text-lg pr-0 pt-2 sm:pr-14 sm:pt-0'>{home.description}</h2>
               </Badge>
             </div>
             <div className='flex items-center justify-center sm:justify-start sm:items-start grid-socials sm:mt-4'>
@@ -39,7 +39,7 @@ export default async function Home({
               <Image 
                 src='/images/blob.svg' 
                 alt='blob' 
-                className='absolute -z-0 size-16  sm:size-36 md:size-60 brightness-50 contrast-100 -hue-rotate-30' 
+                className='absolute -z-0 size-20  sm:size-36 md:size-60 brightness-50 contrast-100 -hue-rotate-30' 
                 width={200} height={200}/>
               <Image 
                 src='/images/angel.webp' 

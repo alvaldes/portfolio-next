@@ -4,22 +4,21 @@ import SendMsg from "./SendMsg";
 import { Locale } from "@/i18n.config";
 import LinkItem from "./Nav/LinkItem";
 import ExternalLinkItem from "./Nav/ExternalLinkItem";
-import { FaGithub } from "react-icons/fa";
+import { FaGithub, FaHome, FaBriefcase } from "react-icons/fa";
 import Socials from "./Socials";
 import { Buymeacoffee } from "./Buymeacoffee";
 
 
 export default function Footer({ lang, dictionary }: { lang: Locale, dictionary:any }) {
-    const currentYear = new Date().getFullYear()
     return (
-        <footer className="container">
+        <footer className="container w-full lg:max-w-[75%] mx-auto">
             <Divider/>
             <div className="sm:container py-8 flex flex-col-reverse sm:flex-row">
                 <div className="flex flex-col sm:w-1/2 gap-2 pb-4 sm:pb-0">
                     <div className="flex gap-4 pl-4 text-xs justify-center sm:flex-col sm:gap-0 sm:pl-0 sm:text-base sm:justify-start">
-                        <div className="mb-0 sm:mb-3 mt-1 flex"><Logo noText/></div>
-                        <LinkItem label={dictionary.nav.home} href='/' lang={lang}/>
-                        <LinkItem label={dictionary.nav.works} href='/works' lang={lang}/>
+                        <div className="mb-0 hidden sm:flex sm:mb-3 mt-1"><Logo noText/></div>
+                        <LinkItem label={dictionary.nav.home} href='/' lang={lang} icon={<FaHome />} />
+                        <LinkItem label={dictionary.nav.works} href='/works' lang={lang} icon={<FaBriefcase />} />
                         <ExternalLinkItem label="Source Code" href='https://github.com/alvaldes/portfolio-next'>
                             <FaGithub /><span className="ml-1" >{dictionary.nav.source}</span>
                         </ExternalLinkItem>
@@ -31,7 +30,7 @@ export default function Footer({ lang, dictionary }: { lang: Locale, dictionary:
             </div>
 
             <p className="flex justify-center flex-wrap">
-                &copy; {`${currentYear} - alvaldes. ${dictionary.footer.copy1} `}
+                {dictionary.footer.copy1}
                 <Link href='https://www.craftz.dog/' color="secondary" underline='hover' className='font-medium mx-1'>
                     Takuya
                 </Link>

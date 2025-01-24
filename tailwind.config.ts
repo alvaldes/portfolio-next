@@ -53,6 +53,7 @@ const config: Config = {
         colors: {
           background: "#f0e7bd", // or DEFAULT
             foreground: "#202023", // or 50 to 900 DEFAULT
+            timeline: "#d16184",
             primary: {
               '50': '#def0ff',
               '100': '#b6e2ff',
@@ -89,6 +90,7 @@ const config: Config = {
         colors: {
           background: "#121212", // or DEFAULT
           foreground: "#ECEDEE", // or 50 to 900 DEFAULT
+          timeline: "#541abd",
           focus: "#044655",
           primary: {
             50: '#dcfffd',
