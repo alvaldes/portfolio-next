@@ -18,7 +18,7 @@ export const metadata: Metadata = {
     url: 'https://alvaldes.vercel.app/en',
     images: [
       {
-        url: 'https://opengraph.b-cdn.net/production/images/adae5c0f-24ed-45c9-94ef-cf1dec6897d9.jpg?token=YqmFuWeeLHb7eVlIUIZVv1QX6C48KjMXZqI_odyCPoo&height=630&width=1200&expires=33273686478',
+        url: 'https://opengraph.b-cdn.net/production/images/adae5c0f-24ed-45c9-94ef-cf1dec6897d9.jpg?token=gKMZjffLBm8eStM3klyO82lZaVCGSx25d7csxbOryk4&height=630&width=1200&expires=33273733483',
       },
     ],
     locale: 'en_US',
@@ -28,7 +28,7 @@ export const metadata: Metadata = {
     card: "summary_large_image", 
     site: "@site", 
     creator: "@creator", 
-    images: "https://opengraph.b-cdn.net/production/images/adae5c0f-24ed-45c9-94ef-cf1dec6897d9.jpg?token=YqmFuWeeLHb7eVlIUIZVv1QX6C48KjMXZqI_odyCPoo&height=630&width=1200&expires=33273686478"
+    images: 'https://opengraph.b-cdn.net/production/images/adae5c0f-24ed-45c9-94ef-cf1dec6897d9.jpg?token=gKMZjffLBm8eStM3klyO82lZaVCGSx25d7csxbOryk4&height=630&width=1200&expires=33273733483',
   },
 }
 
