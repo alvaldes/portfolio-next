@@ -33,7 +33,7 @@ export default function SendMsg({dictionary}:any) {
     return (
         <div className="flex flex-col gap-3 w-full mb-8 sm:mb-0" id="contact-me">
             <h1 className="text-xl font-medium text-center sm:text-start">{dictionary.contact_me}</h1>
-            <div className="flex w-full flex-wrap md:flex-nowrap mb-2 sm:mb-0 gap-4">
+            <div className="flex w-full flex-wrap xl:flex-nowrap mb-2 sm:mb-0 gap-4">
                 <Input
                 isDisabled
                 type="email"
@@ -48,7 +48,7 @@ export default function SendMsg({dictionary}:any) {
                 isDisabled
                 type="text"
                 label={dictionary.subject}
-                defaultValue={dictionary.subject_text}
+                placeholder={dictionary.subject_text}
                 className="inline-block w-full"
                 />
             </div>
