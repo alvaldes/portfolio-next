@@ -27,7 +27,7 @@ export default function ThemeSwitcher() {
 
   return (
       <Button isIconOnly className={`${useThemeValue('bg-purple-800 text-white','bg-yellow-400 text-black')} p-1.5`} size='sm' aria-label='theme-toggle' onClick={toggleTheme}>
-        {useThemeValue(<MoonIcon/>,<SunIcon/>)}
+        {useThemeValue(<MoonIcon width="640" height="480"/>,<SunIcon width="640" height="480"/>)}
       </Button>
   )
 }

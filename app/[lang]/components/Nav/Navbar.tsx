@@ -32,7 +32,7 @@ export default function Navbar({ lang, dictionary }: { lang: Locale, dictionary:
                     size="sm"
                     className="md:hidden p-1"
                   >
-                    <Bars3Icon/>
+                    <Bars3Icon width="640" height="480"/>
                   </Button>
                 </DropdownTrigger>
                 <DropdownMenu variant="faded" aria-label="Static Actions">

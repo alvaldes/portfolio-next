@@ -37,7 +37,7 @@ const GoToTop = () => {
             // onClick={goTop}
             onClick={scrollToTop}
             >
-            <ArrowUpIcon />
+            <ArrowUpIcon width="640" height="480"/>
         </Button>
     );
 };
