@@ -5,7 +5,7 @@ import { IoDocumentText } from "react-icons/io5";
 
 export default function Socials({withEmail}:any){
     return (
-        <span className={`flex ${withEmail? 'gap-2 ' :'gap-4 pl-4 sm:pl-1'} sm:pt-3 flex-wrap justify-center sm:justify-start`}>
+        <span className={`flex ${withEmail? 'gap-2 ' :'gap-4 pl-4 sm:pl-0'} pt-3 flex-wrap justify-center sm:justify-start`}>
             <Tooltip content="@alvaldes">
                 <Link color='foreground' href='https://github.com/alvaldes' isExternal>
                 <FaGithubSquare className='text-2xl text-gray-600 dark:text-zinc-200'/>

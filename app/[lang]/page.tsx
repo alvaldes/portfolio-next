@@ -26,7 +26,7 @@ export default async function Home({
           <span className='py-3 px-11 text-center dark:bg-white/10 bg-black/5 rounded-md font-comfortaa font-black'>{home.banner}</span>
 
           <div className='grid-template py-2 mt-6'>
-            <div className='flex flex-col self-start gap-1 items-start justify-start sm:mt-4 md:mt-12 lg:mt-14 grid-info'>
+            <div className='flex flex-col self-start gap-1 items-start justify-start mt-8 md:mt-12 lg:mt-14 grid-info'>
               <h1 className='mb-2 text-2xl md:text-3xl font-semibold'>{home.name}</h1>
               <Badge content={home.experience} color="warning" variant="solid" placement="top-right" shape="rectangle" showOutline={false} className='text-xs sm:text-sm'>
                 <h2 className='text-sm sm:text-lg pr-0 pt-2 sm:pr-14 sm:pt-0'>{home.description}</h2>
@@ -39,12 +39,12 @@ export default async function Home({
               <Image 
                 src='/images/blob.svg' 
                 alt='blob' 
-                className='absolute -z-0 size-20  sm:size-36 md:size-60 brightness-50 contrast-100 -hue-rotate-30' 
+                className='absolute -z-0 size-36 md:size-60 brightness-50 contrast-100 -hue-rotate-30' 
                 width={200} height={200}/>
               <Image 
                 src='/images/angel.webp' 
                 alt='angel' 
-                className='rounded-full z-10 mt-2 sm:mt-4 md:mt-9 ml-0 border-teal-800 border-4 size-14 sm:size-28 md:size-40' 
+                className='rounded-full z-10 mt-4 sm:mt-4 md:mt-9 ml-0 border-teal-800 border-4 size-28 md:size-40' 
                 width={130} height={130}/>
             </div>
           </div>
