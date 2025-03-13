@@ -43,7 +43,7 @@ export default async function RootLayout({
   readonly children: React.ReactNode
   readonly params: { readonly lang: Locale }
 }) {
-  const { nav, footer } = await getDictionary(params.lang)
+  const { nav, footer, home } = await getDictionary(params.lang)
 
   return (
     <html lang={params.lang} className={`${mPlus.variable} ${comfortaa.variable} dark font-mplus`}>
@@ -57,7 +57,7 @@ export default async function RootLayout({
             {children}
             <GoToTop />
           </main>
-          <Footer lang={params.lang} dictionary={{ nav, footer }} />
+          <Footer lang={params.lang} dictionary={{ nav, footer, home }} />
         </Providers>
       </body>
     </html>

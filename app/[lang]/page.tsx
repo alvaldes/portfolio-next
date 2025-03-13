@@ -33,7 +33,7 @@ export default async function Home({
               </Badge>
             </div>
             <div className='flex items-center justify-center sm:justify-start sm:items-start grid-socials sm:mt-4'>
-              <Socials withEmail/>
+              <Socials withEmail cv_url={home.cv_url}/>
             </div>
             <div className='flex flex-shrink-0 justify-center grid-portrait'>
               <Image 

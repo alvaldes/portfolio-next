@@ -28,7 +28,7 @@ export default function Footer({ lang, dictionary }: { lang: Locale, dictionary:
                             <FaGithub /><span className="ml-1" >{dictionary.nav.source}</span>
                         </ExternalLinkItem>
                     </div>
-                    <Socials/>
+                    <Socials cv_url={dictionary.home.cv_url}/>
                     <div className={`${pathname === '/' ? "mt-6 sm:mt-4": 'mt-3 sm:mt-3'} flex gap-4 pl-4 text-xs justify-center sm:flex-col sm:gap-0 sm:pl-0 sm:text-base sm:justify-start`}>
                         <Buymeacoffee label={dictionary.footer.buyMeACoffee}/>
                     </div>
