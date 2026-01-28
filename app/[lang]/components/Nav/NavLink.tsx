@@ -1,6 +1,6 @@
 'use client'
 
-import { Link } from "@nextui-org/react"
+import { Link } from "@heroui/react"
 import { usePathname } from "next/navigation"
 
 export default function NavLink({label, href, lang, hidden, props}:any) {

@@ -1,7 +1,7 @@
 'use client'
 import { useEffect, useState } from 'react';
 import { ArrowUpIcon } from '@heroicons/react/24/outline';
-import { Button } from '@nextui-org/react';
+import { Button } from '@heroui/react';
 
 const GoToTop = () => {
     const [isVisible, setIsVisible] = useState(false);

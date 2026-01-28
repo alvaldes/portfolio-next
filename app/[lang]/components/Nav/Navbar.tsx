@@ -8,7 +8,7 @@ import { Locale } from "@/i18n.config";
 import LinkItem from "./LinkItem";
 import ExternalLinkItem from "./ExternalLinkItem";
 import NavLink from "./NavLink";
-import { Button, Dropdown, DropdownItem, DropdownMenu, DropdownTrigger } from "@nextui-org/react";
+import { Button, Dropdown, DropdownItem, DropdownMenu, DropdownTrigger } from "@heroui/react";
 import { Bars3Icon } from "@heroicons/react/24/outline";
 import Link from "next/link";
 

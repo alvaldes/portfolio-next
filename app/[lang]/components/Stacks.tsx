@@ -1,5 +1,5 @@
 'use client'
-import { Chip } from '@nextui-org/react'
+import { Chip } from '@heroui/react'
 import { useTheme } from 'next-themes'
 
 const Stacks = ({data}:{data:string[]}) => {

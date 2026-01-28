@@ -1,4 +1,4 @@
-import { Link, Tooltip } from "@nextui-org/react";
+import { Link, Tooltip } from "@heroui/react";
 import { FaGithubSquare, FaLinkedin } from "react-icons/fa";
 import { IoDocumentText } from "react-icons/io5";
 

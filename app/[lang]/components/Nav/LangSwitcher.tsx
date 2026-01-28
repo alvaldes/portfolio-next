@@ -1,6 +1,6 @@
 'use client'
 
-import { Button } from '@nextui-org/button'
+import { Button } from '@heroui/react'
 import SpainIcon from '../icons/SpainIcon'
 import AmericanIcon from '../icons/AmericanIcon'
 import Link from 'next/link'

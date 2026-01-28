@@ -1,11 +1,10 @@
 'use client'
 
-import { Badge, Button, Card, CardBody, Image, Link } from '@nextui-org/react'
+import { Badge, Button, Card, CardBody, Image, Link } from '@heroui/react'
 import { motion } from 'framer-motion'
 
 export default function CardItem({
   data,
-  key,
   lang,
   colSpan,
   dictionary
@@ -17,7 +16,7 @@ export default function CardItem({
       transition={{ duration: 0.2 }}
       className={`relative ${colSpan}`}
     >
-      <Card shadow="sm" key={key} className="h-full relative overflow-hidden">
+      <Card shadow="sm" className="h-full relative overflow-hidden">
         <CardBody className="overflow-visible pt-4 pb-6 px-6 bg-gradient-to-b from-background to-background/40 dark:from-primary-800 dark:to-70%">
           {/* Overlay inside CardBody */}
           <motion.div

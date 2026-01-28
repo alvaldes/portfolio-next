@@ -1,6 +1,6 @@
 'use client'
 
-import { Divider, Link } from "@nextui-org/react";
+import { Divider, Link } from "@heroui/react";
 import Logo from "./Logo";
 import SendMsg from "./SendMsg";
 import { Locale } from "@/i18n.config";

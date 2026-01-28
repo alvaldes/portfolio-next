@@ -1,6 +1,6 @@
 import { Locale } from '@/i18n.config'
 import { getDictionary } from '@/lib/dictionary'
-import { Badge, Button, Divider, Link } from '@nextui-org/react'
+import { Badge, Button, Divider, Link } from '@heroui/react'
 import { ChevronDoubleRightIcon } from '@heroicons/react/16/solid'
 import ResponsiveTimeline from './components/TimeLine/ResponsiveTimeline'
 import Socials from './components/Socials'
@@ -10,11 +10,12 @@ import EarthCanvas from './components/EarthCanvas'
 import StartCanvas from './components/StarsCanvas'
 
 export default async function Home({
-  params: { lang }
-} : Readonly<{
-  params: { lang: Locale }
+  params
+}: Readonly<{
+  params: Promise<{ lang: string }>
 }>) {
-  const { home } = await getDictionary(lang)
+  const { lang } = await params
+  const { home } = await getDictionary(lang as Locale)
   return (
       <article className='flex flex-col mx-auto'>
         <SectionTransition delay={0.2} id='banner' className='flex flex-col gap-4 mt-3'>

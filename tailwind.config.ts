@@ -1,6 +1,5 @@
 import type { Config } from 'tailwindcss'
-
-const {nextui} = require("@nextui-org/react");
+import {heroui} from "@heroui/react"
 
 
 const config: Config = {
@@ -8,7 +7,7 @@ const config: Config = {
     './pages/**/*.{js,ts,jsx,tsx,mdx}',
     './components/**/*.{js,ts,jsx,tsx,mdx}',
     './app/**/*.{js,ts,jsx,tsx,mdx}',
-    "./node_modules/@nextui-org/theme/dist/**/*.{js,ts,jsx,tsx}",
+    "./node_modules/@heroui/theme/dist/**/*.{js,ts,jsx,tsx}",
   ],
   darkMode: 'class',
   theme: {
@@ -46,14 +45,13 @@ const config: Config = {
       }
     },
   },
-  plugins: [nextui({
+  plugins: [heroui({
     themes: {
       light: {
         layout: {},
         colors: {
           background: "#f0e7bd", // or DEFAULT
             foreground: "#202023", // or 50 to 900 DEFAULT
-            timeline: "#d16184",
             primary: {
               '50': '#def0ff',
               '100': '#b6e2ff',
@@ -90,7 +88,6 @@ const config: Config = {
         colors: {
           background: "#121212", // or DEFAULT
           foreground: "#ECEDEE", // or 50 to 900 DEFAULT
-          timeline: "#541abd",
           focus: "#044655",
           primary: {
             50: '#dcfffd',

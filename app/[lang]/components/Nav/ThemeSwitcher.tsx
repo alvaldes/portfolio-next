@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from 'react'
 import { useTheme } from 'next-themes'
-import { Button } from '@nextui-org/button'
+import { Button } from '@heroui/react'
 import { SunIcon } from '@heroicons/react/24/outline'
 import { MoonIcon } from '@heroicons/react/16/solid'
 
