@@ -7,14 +7,14 @@
     },
     "home": {
         "banner":"Hola, soy un Ingeniero de Software residente en México!",
-        "experience": "+3 años",
+        "experience": "+9 años",
         "name": "Angel L. Valdés",
         "description": "Desarrollador Web (Full-Stack)",
         "bio": "Biografía",
-        "resume": "Con más de 4 años de experiencia en desarrollo web, me especializo en crear soluciones dinámicas, responsivas y centradas en el usuario. Mi experiencia en tecnologías modernas, dedicación a un código limpio y eficiente, y pasión por ofrecer experiencias de usuario impactantes me distinguen. Actualmente, contribuyo al desarrollo de proyectos de alto impacto, demostrando mi capacidad para resolver desafíos complejos y fomentar la innovación. Descubre mi trabajo más reciente en ",
+        "resume": "Con más de 10 años de experiencia en desarrollo web, me especializo en crear soluciones dinámicas, responsivas y centradas en el usuario. Mi experiencia en tecnologías modernas, dedicación a un código limpio y eficiente, y pasión por ofrecer experiencias de usuario impactantes me distinguen. Actualmente, contribuyo al desarrollo de proyectos de alto impacto, demostrando mi capacidad para resolver desafíos complejos y fomentar la innovación. Descubre mi trabajo más reciente en ",
         "currentProject": {
-            "label": "ωεβ Τσφδ",
-            "url": "/works/web-tools"
+            "label": "csv2trello",
+            "url": "/works/csv2trello"
         },
         "cv_url": "https://drive.google.com/file/d/1i2Ag6Pvlb2ri35gIYrOPPxgj0jpfPj8P/view?usp=drive_link",
         "timeline": [
@@ -52,6 +52,21 @@
         "sourceCode": "Código",
         "stack": "Stack",
         "projects": [
+            {
+                "id":"csv2trello",
+                "title": "csv2trello",
+                "year":"2026",
+                "shortDescription": "Herramienta interactiva TUI y CLI que convierte CSV en tableros Trello.",
+                "longDescription": "Herramienta interactiva TUI y CLI que convierte archivos CSV que contienen historias de usuarios y tareas en tableros Trello automáticamente.",
+                "website": "https://web-tools.vercel.app/",
+                "sourceCode": "https://github.com/alvaldes/csv2trello",
+                "platform": "Terminal",
+                "active": 1,
+                "stack": "Python, Textual, Trello API",
+                "thumbCard": "/images/csv2trello/thumbCard.webp",
+                "thumbFirst":"/images/csv2trello/thumbFirst.webp",
+                "thumbMockup":"/images/csv2trello/thumbMockup.webp"
+            },
             {
                 "id":"web-tools",
                 "title": "ωεβ Τσφδ",

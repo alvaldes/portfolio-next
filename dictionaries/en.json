@@ -7,14 +7,14 @@
     },
     "home": {
         "banner":"Hello, I'm a Software Engineer base in Mexico!",
-        "experience": "+3 years",
+        "experience": "+9 years",
         "name": "Angel L. Valdés",
         "description": "Web Developer (Full-Stack)",
         "bio": "Biography",
-        "resume": "With over 4 years of web development expertise, I specialize in crafting dynamic, responsive, and user-focused solutions. My proficiency in modern technologies, dedication to clean and efficient code, and passion for delivering impactful user experiences set me apart. Currently, I contribute to the development of high-impact projects, showcasing my ability to solve complex challenges and drive innovation. Check out my latest work on ",
+        "resume": "With over 10 years of web development expertise, I specialize in crafting dynamic, responsive, and user-focused solutions. My proficiency in modern technologies, dedication to clean and efficient code, and passion for delivering impactful user experiences set me apart. Currently, I contribute to the development of high-impact projects, showcasing my ability to solve complex challenges and drive innovation. Check out my latest work on ",
         "currentProject": {
-            "label": "ωεβ Τσφδ",
-            "url": "/works/web-tools"
+            "label": "csv2trello",
+            "url": "/works/csv2trello"
         },
         "cv_url": "https://drive.google.com/file/d/17LGdJi3BRrd2zVB9nA8VjoO2y-Yxgxtq/view?usp=drive_link",
         "timeline": [
@@ -52,6 +52,21 @@
         "sourceCode": "Source Code",
         "stack": "Stack",
         "projects": [
+            {
+                "id":"csv2trello",
+                "title": "csv2trello",
+                "year":"2026",
+                "shortDescription": "Interactive TUI and CLI tool that converts CSV into Trello boards.",
+                "longDescription": "Interactive TUI and CLI tool that converts CSV files containing user stories and tasks into Trello boards automatically.",
+                "website": "https://web-tools.vercel.app/",
+                "sourceCode": "https://github.com/alvaldes/csv2trello",
+                "platform": "Terminal",
+                "active": 1,
+                "stack": "Python, Textual, Trello API",
+                "thumbCard": "/images/csv2trello/thumbCard.webp",
+                "thumbFirst":"/images/csv2trello/thumbFirst.webp",
+                "thumbMockup":"/images/csv2trello/thumbMockup.webp"
+            },
             {
                 "id":"web-tools",
                 "title": "ωεβ Τσφδ",
