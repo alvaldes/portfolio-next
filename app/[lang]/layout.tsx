@@ -41,23 +41,24 @@ export default async function RootLayout({
   params
 }: {
   readonly children: React.ReactNode
-  readonly params: { readonly lang: Locale }
+  readonly params: Promise<{ lang: string }>
 }) {
-  const { nav, footer, home } = await getDictionary(params.lang)
+  const { lang } = await params
+  const { nav, footer, home } = await getDictionary(lang as Locale)
 
   return (
-    <html lang={params.lang} className={`${mPlus.variable} ${comfortaa.variable} dark font-mplus`}>
+    <html lang={lang as Locale} className={`${mPlus.variable} ${comfortaa.variable} dark font-mplus`}>
       <body className={`text-foreground container`}>
         <div className="fixed left-0 top-0 -z-10 h-full w-full"><div className="absolute inset-0 -z-10 h-full w-full bg-background bg-[linear-gradient(to_right,#8080800a_1px,transparent_1px),linear-gradient(to_bottom,#8080800a_1px,transparent_1px)] bg-[size:14px_24px]"><div className="absolute left-0 right-0 top-0 -z-10 m-auto h-[310px] w-[310px] rounded-full dark:bg-amber-500 bg-rose-900 dark:opacity-20 opacity-40 blur-[100px]"></div></div></div>
         <Providers>
           <header className='lg:max-w-[75%]'>
-            <Navbar lang={params.lang} dictionary={nav} />
+            <Navbar lang={lang as Locale} dictionary={nav} />
           </header>
           <main className='text-foreground mt-20 w-full lg:max-w-[75%] mx-auto'>
             {children}
             <GoToTop />
           </main>
-          <Footer lang={params.lang} dictionary={{ nav, footer, home }} />
+          <Footer lang={lang as Locale} dictionary={{ nav, footer, home }} />
         </Providers>
       </body>
     </html>

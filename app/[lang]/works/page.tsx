@@ -1,8 +1,7 @@
 import { Locale } from "@/i18n.config";
 import { getDictionary } from "@/lib/dictionary";
 import CardItem from "../components/CardItem";
-import { Divider } from "@nextui-org/react";
-import { motion } from "framer-motion";
+import { Divider } from "@heroui/react";
 import SectionTransition from "../components/SectionTransition";
 
 interface Project {
@@ -22,24 +21,29 @@ interface Project {
 }
 
 export default async function Works({
-    params: { lang }
-    } : Readonly<{
-        params: { lang: Locale }
+    params
+    }: Readonly<{
+        params: Promise<{ lang: string }>
     }>) {
-    const { works } = await getDictionary(lang)
+    const { lang } = await params
+    const { works } = await getDictionary(lang as Locale)
     return (
         <SectionTransition delay={0.2} id='works' className="w-full">
             <h1 className="text-2xl font-bold mb-2">{works.title}</h1>
             <Divider></Divider>
             <div className="grid [grid-template-columns:repeat(auto-fit,minmax(250px,1fr))] gap-4 my-4">
-                {works.projects.map((item,index) => (
-                    <CardItem 
-                        key={item.id} 
-                        data={item} 
-                        lang={lang} 
-                        dictionary={works} 
-                        colSpan={(index === 0 && works.projects.length % 2 !== 0) ? 'col-span-full lg:col-span-1' : 'col-span-1'}/>
-                ))}
+                {works.projects.map((item,index) => {
+                    const colSpan = (index === 0 && works.projects.length % 2 !== 0) ? 'col-span-full lg:col-span-1' : 'col-span-1';
+                    return (
+                        <CardItem
+                            key={item.id}
+                            data={item}
+                            lang={lang}
+                            dictionary={works}
+                            colSpan={colSpan}
+                        />
+                    );
+                })}
             </div>
         </SectionTransition>
     );

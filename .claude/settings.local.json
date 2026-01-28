@@ -7,7 +7,12 @@
       "Bash(curl:*)",
       "Bash(node -e:*)",
       "mcp__next-devtools__upgrade_nextjs_16",
-      "Bash(node --version:*)"
+      "Bash(node --version:*)",
+      "Bash(bun run build)",
+      "Bash(bun pm:*)",
+      "Bash(bun run build:*)",
+      "Bash(timeout 30 bun run dev:*)",
+      "mcp__next-devtools__browser_eval"
     ]
   }
 }

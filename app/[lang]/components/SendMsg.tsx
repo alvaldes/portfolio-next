@@ -1,6 +1,6 @@
 'use client'
 import { EnvelopeIcon, PaperAirplaneIcon } from "@heroicons/react/24/outline";
-import { Button, Input, Textarea } from "@nextui-org/react";
+import { Button, Input, Textarea } from "@heroui/react";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
 

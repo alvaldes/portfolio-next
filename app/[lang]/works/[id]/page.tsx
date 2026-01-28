@@ -1,7 +1,7 @@
 import { Locale } from "@/i18n.config";
 import { getDictionary } from "@/lib/dictionary";
 import { CommandLineIcon, GlobeAltIcon } from "@heroicons/react/24/outline";
-import { Divider, Image, Link } from "@nextui-org/react";
+import { Divider, Image, Link } from "@heroui/react";
 import { marked } from "marked";
 import { FaGithub } from "react-icons/fa";
 import Stacks from "../../components/Stacks";
@@ -24,11 +24,12 @@ interface Project {
 }
 
 export default async function Work({
-    params: { lang, id }
-    } : Readonly<{
-        params: { lang: Locale, id: string }
+    params
+    }: Readonly<{
+        params: Promise<{ lang: string, id: string }>
     }>) {
-    const { works } = await getDictionary(lang)
+    const { lang, id } = await params
+    const { works } = await getDictionary(lang as Locale)
     const project = works.projects.find(p => p.id === id)
     const stackList = project?.stack === undefined ? [] : project.stack.split(',')
     return (
