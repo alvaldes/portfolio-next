@@ -1,13 +1,5 @@
 <div align="center">
 <img src="app/favicon.ico" height="90px" width="auto" />
-<h2>
-    My Personal Portfolio
-</h2>
-<img src="public/images/screenshots/portada.png" height="400px" width="auto" />
-
-</div>
-
-<p></p>
 
 <div align="center">
 
@@ -16,6 +8,14 @@
 ![TypeScript Badge](https://img.shields.io/badge/TypeScript-5-3178C6?logo=typescript&logoColor=white&style=flat)
 ![Tailwind CSS Badge](https://img.shields.io/badge/Tailwind_CSS-4-06B6D4?logo=tailwindcss&logoColor=white&style=flat)
 [![Buy Me A Coffee](https://img.shields.io/badge/Buy%20Me%20a%20Coffee-ffdd00?&logo=buy-me-a-coffee&logoColor=black)](#)
+
+</div>
+
+<h2>
+    My Personal Portfolio
+</h2>
+
+<img src="public/images/screenshots/portada.png" height="400px" width="auto" />
 
 </div>
 
@@ -120,4 +120,4 @@ MIT
 
 Give a ⭐ if you like this website!
 
-<a href="https://www.buymeacoffee.com/alvaldesde6"><img src="https://img.buymeacoffee.com/button-api/?text=Buy me a coffee&emoji=☕&slug=alvaldesde6&button_colour=FFDD00&font_colour=000000&font_family=Cookie&outline_colour=000000&coffee_colour=ffffff" /></a>
+<a href="https://www.buymeacoffee.com/alvaldesde6"><img src="public/images/buymeacoffee-landscape.png" height="60px" width="auto"/></a>
