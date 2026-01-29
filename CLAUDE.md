@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-Personal portfolio website built with Next.js 16, React 19, HeroUI v3 (beta), and Tailwind CSS v4. Features i18n support (English/Spanish), dark/light themes, and 3D visual elements.
+Personal portfolio website built with Next.js 16, React 19, HeroUI (latest stable), and Tailwind CSS v4. Features i18n support (English/Spanish), dark/light themes, and 3D visual elements.
 
 ## Commands
 
@@ -39,7 +39,7 @@ Routes use `app/[lang]/` pattern with `lang` being `en` or `es`:
 ### Styling
 
 - **Tailwind CSS v4** via `@tailwindcss/postcss` plugin (no `tailwind.config.ts` in v4 - config in CSS)
-- **HeroUI v3** components from `@heroui/react`
+- **HeroUI** components from `@heroui/react` (latest stable release)
 - Custom theme variables in `globals.css` under `@theme { }` block
 - Theme switching via `next-themes` with `attribute="class"`
 
@@ -72,4 +72,4 @@ export default async function Page(props: {
 
 ## Current Migration Status
 
-The project is on Next.js 16.1.5, React 19, HeroUI v3 beta, and Tailwind v4. See `MIGRATION.md` for upgrade history and `TODO.md` for planned future upgrades when HeroUI v3 becomes stable.
+The project is on Next.js 16.1.6, React 19, HeroUI (latest stable), and Tailwind v4. See `MIGRATION.md` for upgrade history and `TODO.md` for planned future upgrades.
