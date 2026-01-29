@@ -46,8 +46,8 @@ export default function Navbar({ lang, dictionary }: { lang: Locale, dictionary:
                   <DropdownItem key={dictionary.contact}>
                     <ContactLink label={dictionary.contact}/>
                   </DropdownItem>
-                  <DropdownItem key={dictionary.source} className="text-danger" color="danger" href='https://github.com/alvaldes/portfolio-next'>
-                    <ExternalLinkItem label="Source Code" href='https://github.com/alvaldes/portfolio-next'>
+                  <DropdownItem key={dictionary.source} className="text-danger" color="danger" href='https://github.com/alvaldes/portfolio'>
+                    <ExternalLinkItem label="Source Code" href='https://github.com/alvaldes/portfolio'>
                       <FaGithub /><span className="ml-1" >{dictionary.source}</span>
                     </ExternalLinkItem>
                   </DropdownItem>
@@ -59,7 +59,7 @@ export default function Navbar({ lang, dictionary }: { lang: Locale, dictionary:
               <LinkItem label={dictionary.home} href='/' lang={lang} key={`${dictionary.home}-0`}/>
               <LinkItem label={dictionary.works} href='/works' lang={lang} key={`${dictionary.works}-1`}/>
               <ContactLink label={dictionary.contact} key={`${dictionary.contact}-2`}/>
-              <ExternalLinkItem label="Source Code" href='https://github.com/alvaldes/portfolio-next' key={`${dictionary.source}-3`}>
+              <ExternalLinkItem label="Source Code" href='https://github.com/alvaldes/portfolio' key={`${dictionary.source}-3`}>
                 <FaGithub /><span className="ml-1" >{dictionary.source}</span>
               </ExternalLinkItem>
             </div>

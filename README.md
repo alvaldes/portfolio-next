@@ -1,15 +1,9 @@
 <div align="center">
-<img src="public/images/logo-dark.svg" height="90px" width="auto" />
+<img src="app/favicon.ico" height="90px" width="auto" />
 <h2>
     My Personal Portfolio
 </h2>
-<p>
-Modern website with multilingual support (English/Spanish), dark/light theme and interactive 3D elements
-</p>
-
-<p>
-Built with ❤️
-</p>
+<img src="public/images/screenshots/portada.png" height="400px" width="auto" />
 
 </div>
 
@@ -74,7 +68,7 @@ Built with ❤️
 
 ```bash
 # Clone the repository
-git clone https://github.com/yourusername/portfolio-next.git
+git clone https://github.com/alvaldes/portfolio.git
 
 # Install dependencies
 pnpm install
@@ -98,7 +92,7 @@ Open [http://localhost:3000/en](http://localhost:3000/en) or [http://localhost:3
 ## 📁 Project Structure
 
 ```
-portfolio-next/
+portfolio/
 ├── app/
 │   └── [lang]/              # i18n routes (en/es)
 │       ├── layout.tsx       # Main layout with providers

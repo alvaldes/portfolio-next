@@ -24,7 +24,7 @@ export default function Footer({ lang, dictionary }: { lang: Locale, dictionary:
                         <div className="mb-0 hidden sm:flex sm:mb-3 mt-1"><Logo noText/></div>
                         <LinkItem label={dictionary.nav.home} href='/' lang={lang} icon={<FaHome />} />
                         <LinkItem label={dictionary.nav.works} href='/works' lang={lang} icon={<FaBriefcase />} />
-                        <ExternalLinkItem label="Source Code" href='https://github.com/alvaldes/portfolio-next'>
+                        <ExternalLinkItem label="Source Code" href='https://github.com/alvaldes/portfolio'>
                             <FaGithub /><span className="ml-1" >{dictionary.nav.source}</span>
                         </ExternalLinkItem>
                     </div>
