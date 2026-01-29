@@ -58,7 +58,6 @@
                 "year":"2026",
                 "shortDescription": "Interactive TUI and CLI tool that converts CSV into Trello boards.",
                 "longDescription": "Interactive TUI and CLI tool that converts CSV files containing user stories and tasks into Trello boards automatically.",
-                "website": "https://web-tools.vercel.app/",
                 "sourceCode": "https://github.com/alvaldes/csv2trello",
                 "platform": "Terminal",
                 "active": 1,

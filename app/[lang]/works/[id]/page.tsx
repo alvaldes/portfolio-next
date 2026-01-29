@@ -14,7 +14,7 @@ interface Project {
     stack: string;
     shortDescription: string;
     longDescription: string;
-    website: string;
+    website?: string;
     sourceCode: string;
     platform: string;
     active: number;
@@ -50,15 +50,17 @@ export default async function Work({
                 : ""
             }}/>
             <div className="flex flex-col gap-2">
-                <p className="flex">
-                    <span className="flex font-bold mr-2">
-                        <GlobeAltIcon width={18} className="mr-1"/>
-                        {works.website}:
-                    </span>
-                    <Link href={project?.website} isExternal showAnchorIcon color="secondary" isDisabled={!project?.website.startsWith('http')}>
-                        {project?.website.startsWith('http') ? project?.website.substring(8) : project?.website}
-                    </Link>
-                </p>
+                {project?.website && (
+                    <p className="flex">
+                        <span className="flex font-bold mr-2">
+                            <GlobeAltIcon width={18} className="mr-1"/>
+                            {works.website}:
+                        </span>
+                        <Link href={project.website} isExternal showAnchorIcon color="secondary" isDisabled={!project.website.startsWith('http')}>
+                            {project.website.startsWith('http') ? project.website.substring(8) : project.website}
+                        </Link>
+                    </p>
+                )}
                 <p className="flex flex-wrap">
                     <span className="flex font-bold mr-2 items-center">
                         <FaGithub className="mr-1"/>
