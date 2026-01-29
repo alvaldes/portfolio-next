@@ -7,24 +7,6 @@
 
 </div>
 
-<div align="center">
-    <a href="#🚀-getting-started">
-        Getting Started
-    </a>
-    <span>&nbsp;✦&nbsp;</span>
-    <a href="#🧞-commands">
-        Commands
-    </a>
-    <span>&nbsp;✦&nbsp;</span>
-    <a href="#📁-project-structure">
-        Structure
-    </a>
-    <span>&nbsp;✦&nbsp;</span>
-    <a href="#🔑-license">
-        License
-    </a>
-</div>
-
 <p></p>
 
 <div align="center">
