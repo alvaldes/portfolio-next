@@ -8,6 +8,7 @@ import { Locale } from "@/i18n.config";
 import LinkItem from "./LinkItem";
 import ExternalLinkItem from "./ExternalLinkItem";
 import NavLink from "./NavLink";
+import ContactLink from "./ContactLink";
 import { Button, Dropdown, DropdownItem, DropdownMenu, DropdownTrigger } from "@heroui/react";
 import { Bars3Icon } from "@heroicons/react/24/outline";
 import Link from "next/link";
@@ -42,8 +43,8 @@ export default function Navbar({ lang, dictionary }: { lang: Locale, dictionary:
                   <DropdownItem key={dictionary.works} href='/works' as={Link}>
                     <NavLink label={dictionary.works} href='/works' lang={lang}/>
                   </DropdownItem>
-                  <DropdownItem key={dictionary.contact} href='#contact-me' as={Link}>
-                    <NavLink label={dictionary.contact} href='#contact-me' lang={lang}/>
+                  <DropdownItem key={dictionary.contact}>
+                    <ContactLink label={dictionary.contact}/>
                   </DropdownItem>
                   <DropdownItem key={dictionary.source} className="text-danger" color="danger" href='https://github.com/alvaldes/portfolio-next'>
                     <ExternalLinkItem label="Source Code" href='https://github.com/alvaldes/portfolio-next'>
@@ -57,7 +58,7 @@ export default function Navbar({ lang, dictionary }: { lang: Locale, dictionary:
             <div className="flex p-4 md:p-0 gap-8">
               <LinkItem label={dictionary.home} href='/' lang={lang} key={`${dictionary.home}-0`}/>
               <LinkItem label={dictionary.works} href='/works' lang={lang} key={`${dictionary.works}-1`}/>
-              <LinkItem label={dictionary.contact} href='#contact-me' lang={lang} key={`${dictionary.contact}-2`}/>
+              <ContactLink label={dictionary.contact} key={`${dictionary.contact}-2`}/>
               <ExternalLinkItem label="Source Code" href='https://github.com/alvaldes/portfolio-next' key={`${dictionary.source}-3`}>
                 <FaGithub /><span className="ml-1" >{dictionary.source}</span>
               </ExternalLinkItem>
