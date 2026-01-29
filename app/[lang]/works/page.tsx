@@ -31,19 +31,15 @@ export default async function Works({
         <SectionTransition delay={0.2} id='works' className="w-full">
             <h1 className="text-2xl font-bold mb-2">{works.title}</h1>
             <Divider></Divider>
-            <div className="grid [grid-template-columns:repeat(auto-fit,minmax(250px,1fr))] gap-4 my-4">
-                {works.projects.map((item,index) => {
-                    const colSpan = (index === 0 && works.projects.length % 2 !== 0) ? 'col-span-full lg:col-span-1' : 'col-span-1';
-                    return (
-                        <CardItem
-                            key={item.id}
-                            data={item}
-                            lang={lang}
-                            dictionary={works}
-                            colSpan={colSpan}
-                        />
-                    );
-                })}
+            <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-6 my-6">
+                {works.projects.map((item) => (
+                    <CardItem
+                        key={item.id}
+                        data={item}
+                        lang={lang}
+                        buttonText={works.more}
+                    />
+                ))}
             </div>
         </SectionTransition>
     );
