@@ -1,5 +1,4 @@
 'use client'
-import React from "react";
 import Logo from "../Logo";
 import ThemeSwitcher from "./ThemeSwitcher";
 import LangSwitcher from "./LangSwitcher";
@@ -7,13 +6,16 @@ import { FaGithub } from "react-icons/fa";
 import { Locale } from "@/i18n.config";
 import LinkItem from "./LinkItem";
 import ExternalLinkItem from "./ExternalLinkItem";
-import NavLink from "./NavLink";
 import ContactLink from "./ContactLink";
 import { Button, Dropdown, DropdownItem, DropdownMenu, DropdownTrigger } from "@heroui/react";
 import { Bars3Icon } from "@heroicons/react/24/outline";
 import Link from "next/link";
+import { usePathname } from "next/navigation"
 
 export default function Navbar({ lang, dictionary }: { lang: Locale, dictionary:any }) {
+    const usePath = usePathname()
+    const pathname = usePath.slice(3) === '' ? '/' : usePath.slice(3)
+
     return (
       <nav className="bg-transparent fixed w-full z-20 top-0 start-0 backdrop-blur-md">
         <div className="flex flex-wrap items-center justify-between p-4  w-full lg:max-w-[75%] mx-auto">
@@ -37,11 +39,11 @@ export default function Navbar({ lang, dictionary }: { lang: Locale, dictionary:
                   </Button>
                 </DropdownTrigger>
                 <DropdownMenu variant="faded" aria-label="Static Actions">
-                  <DropdownItem key={dictionary.home} href='/' as={Link}>
-                    <NavLink label={dictionary.home} href='/' lang={lang}/>
+                  <DropdownItem key={dictionary.home} href='/' as={Link} className={pathname ==='/' ? 'text-primary' : 'text-foreground'}>
+                    <span className="text-base">{dictionary.home}</span>
                   </DropdownItem>
-                  <DropdownItem key={dictionary.works} href='/works' as={Link}>
-                    <NavLink label={dictionary.works} href='/works' lang={lang}/>
+                  <DropdownItem key={dictionary.works} href='/works' as={Link} className={pathname ==='/works' ? 'text-primary' : 'text-foreground'}>
+                    <span className="text-base">{dictionary.works}</span>
                   </DropdownItem>
                   <DropdownItem key={dictionary.contact}>
                     <ContactLink label={dictionary.contact}/>
